@@ -1,0 +1,1207 @@
+{
+ "atualizado_em": "2026-09-25T11:48-03:00",
+ "parametros": {
+  "limite_pendente_h": 200,
+  "coleta_vencida_dias": 14,
+  "janela_taxa_dias": 90
+ },
+ "fonte": {
+  "board_status": 18420324650,
+  "board_historico": 18420370319,
+  "leituras_historico": 135
+ },
+ "resumo": {
+  "atrasado": 3,
+  "pendente": 0,
+  "em_dia": 18,
+  "sem_leitura": 4,
+  "total": 25,
+  "coleta_vencida": 11
+ },
+ "maquinas": [
+  {
+   "id": "12432218691",
+   "tag": "M04",
+   "local": "MESPACK D",
+   "equip": "HITACHI PXR 04",
+   "familia": "Hitachi",
+   "serie": "19287101",
+   "tipo": "Crescente",
+   "freq": 2000,
+   "horimetro": 3001,
+   "horimetro_total": 2000,
+   "restantes": -1001,
+   "pct_consumido": 150.0,
+   "status": "ATRASADO",
+   "dias_24h": null,
+   "taxa_h_dia": 19.8,
+   "dias_previstos": null,
+   "previsao": null,
+   "ultima_coleta": "2026-09-24",
+   "dias_sem_coleta": 1,
+   "coleta_vencida": false,
+   "ultima_preventiva": null,
+   "obs_recente": "Agendar manutenção preventiva",
+   "historico": [
+    [
+     "2026-07-03",
+     1357
+    ],
+    [
+     "2026-07-08",
+     1376
+    ],
+    [
+     "2026-07-15",
+     1520
+    ],
+    [
+     "2026-08-06",
+     1895
+    ],
+    [
+     "2026-08-19",
+     2141
+    ],
+    [
+     "2026-09-02",
+     2475
+    ],
+    [
+     "2026-09-09",
+     2642
+    ],
+    [
+     "2026-09-24",
+     3001
+    ]
+   ]
+  },
+  {
+   "id": "12432275611",
+   "tag": "M09",
+   "local": "SELADORA ROTULADORA",
+   "equip": "HITACHI RX2-S- 09",
+   "familia": "Hitachi",
+   "serie": "2504712502",
+   "tipo": "Crescente",
+   "freq": 2000,
+   "horimetro": 2012,
+   "horimetro_total": 2000,
+   "restantes": -12,
+   "pct_consumido": 100.6,
+   "status": "ATRASADO",
+   "dias_24h": null,
+   "taxa_h_dia": 10.5,
+   "dias_previstos": null,
+   "previsao": null,
+   "ultima_coleta": "2026-09-24",
+   "dias_sem_coleta": 1,
+   "coleta_vencida": false,
+   "ultima_preventiva": null,
+   "obs_recente": "Agendar manutenção preventiva",
+   "historico": [
+    [
+     "2026-07-03",
+     1140
+    ],
+    [
+     "2026-07-08",
+     1159
+    ],
+    [
+     "2026-07-15",
+     1168
+    ],
+    [
+     "2026-08-06",
+     1286
+    ],
+    [
+     "2026-08-19",
+     1383
+    ],
+    [
+     "2026-09-02",
+     1625
+    ],
+    [
+     "2026-09-09",
+     1688
+    ],
+    [
+     "2026-09-24",
+     2012
+    ]
+   ]
+  },
+  {
+   "id": "12432266194",
+   "tag": "M14",
+   "local": "4KG",
+   "equip": "HITACHI PXR 14",
+   "familia": "Hitachi",
+   "serie": "19256012",
+   "tipo": "Crescente",
+   "freq": 2000,
+   "horimetro": 2000,
+   "horimetro_total": 2000,
+   "restantes": 0,
+   "pct_consumido": 100.0,
+   "status": "ATRASADO",
+   "dias_24h": null,
+   "taxa_h_dia": 7.8,
+   "dias_previstos": null,
+   "previsao": null,
+   "ultima_coleta": "2026-09-24",
+   "dias_sem_coleta": 1,
+   "coleta_vencida": false,
+   "ultima_preventiva": "2026-07-15",
+   "obs_recente": null,
+   "historico": [
+    [
+     "2026-07-03",
+     521
+    ],
+    [
+     "2026-07-08",
+     764
+    ],
+    [
+     "2026-07-15",
+     152
+    ],
+    [
+     "2026-08-06",
+     272
+    ],
+    [
+     "2026-08-19",
+     1122
+    ],
+    [
+     "2026-09-02",
+     1276
+    ],
+    [
+     "2026-09-09",
+     1339
+    ],
+    [
+     "2026-09-24",
+     2000
+    ]
+   ]
+  },
+  {
+   "id": "12432131920",
+   "tag": "M03",
+   "local": "ROTULADORA",
+   "equip": "HITACHI PB 03",
+   "familia": "Hitachi",
+   "serie": "16896010",
+   "tipo": "Crescente",
+   "freq": 2000,
+   "horimetro": 1399,
+   "horimetro_total": 2000,
+   "restantes": 601,
+   "pct_consumido": 70.0,
+   "status": "EM_DIA",
+   "dias_24h": 25,
+   "taxa_h_dia": 21.2,
+   "dias_previstos": 28,
+   "previsao": "2026-10-23",
+   "ultima_coleta": "2026-09-09",
+   "dias_sem_coleta": 16,
+   "coleta_vencida": true,
+   "ultima_preventiva": "2026-07-08",
+   "obs_recente": "Precisamos agendar preventiva, maquina de tinta amarela",
+   "historico": [
+    [
+     "2026-07-03",
+     2294
+    ],
+    [
+     "2026-07-08",
+     21
+    ],
+    [
+     "2026-07-15",
+     162
+    ],
+    [
+     "2026-08-06",
+     625
+    ],
+    [
+     "2026-08-19",
+     942
+    ],
+    [
+     "2026-09-02",
+     1233
+    ],
+    [
+     "2026-09-09",
+     1399
+    ]
+   ]
+  },
+  {
+   "id": "12432392876",
+   "tag": "M26",
+   "local": "SERAC",
+   "equip": "TINTA CODELINE",
+   "familia": "Codeline",
+   "serie": "2512006",
+   "tipo": "Regressivo",
+   "freq": 6000,
+   "horimetro": 822,
+   "horimetro_total": 6000,
+   "restantes": 822,
+   "pct_consumido": 86.3,
+   "status": "EM_DIA",
+   "dias_24h": 34,
+   "taxa_h_dia": 10.5,
+   "dias_previstos": 78,
+   "previsao": "2026-12-12",
+   "ultima_coleta": "2026-09-24",
+   "dias_sem_coleta": 1,
+   "coleta_vencida": false,
+   "ultima_preventiva": null,
+   "obs_recente": null,
+   "historico": [
+    [
+     "2026-07-08",
+     1640
+    ],
+    [
+     "2026-07-15",
+     1640
+    ],
+    [
+     "2026-08-06",
+     1518
+    ],
+    [
+     "2026-09-02",
+     1209
+    ],
+    [
+     "2026-09-09",
+     1062
+    ],
+    [
+     "2026-09-24",
+     822
+    ]
+   ]
+  },
+  {
+   "id": "12432266290",
+   "tag": "M25",
+   "local": "MESPACK A",
+   "equip": "TINTA CODELINE",
+   "familia": "Codeline",
+   "serie": "2541075",
+   "tipo": "Regressivo",
+   "freq": 6000,
+   "horimetro": 1041,
+   "horimetro_total": 6000,
+   "restantes": 1041,
+   "pct_consumido": 82.7,
+   "status": "EM_DIA",
+   "dias_24h": 43,
+   "taxa_h_dia": 21.0,
+   "dias_previstos": 50,
+   "previsao": "2026-11-14",
+   "ultima_coleta": "2026-09-24",
+   "dias_sem_coleta": 1,
+   "coleta_vencida": false,
+   "ultima_preventiva": null,
+   "obs_recente": null,
+   "historico": [
+    [
+     "2026-07-03",
+     2827
+    ],
+    [
+     "2026-07-08",
+     2727
+    ],
+    [
+     "2026-07-15",
+     2606
+    ],
+    [
+     "2026-08-06",
+     2146
+    ],
+    [
+     "2026-08-19",
+     1829
+    ],
+    [
+     "2026-09-02",
+     1519
+    ],
+    [
+     "2026-09-09",
+     1376
+    ],
+    [
+     "2026-09-24",
+     1041
+    ]
+   ]
+  },
+  {
+   "id": "12432254845",
+   "tag": "M23",
+   "local": "SELADORA ROTULADORA",
+   "equip": "TINTA CODELINE",
+   "familia": "Codeline",
+   "serie": "242605",
+   "tipo": "Regressivo",
+   "freq": 6000,
+   "horimetro": 1244,
+   "horimetro_total": 6000,
+   "restantes": 1244,
+   "pct_consumido": 79.3,
+   "status": "EM_DIA",
+   "dias_24h": 52,
+   "taxa_h_dia": 14.5,
+   "dias_previstos": 86,
+   "previsao": "2026-12-20",
+   "ultima_coleta": "2026-09-09",
+   "dias_sem_coleta": 16,
+   "coleta_vencida": true,
+   "ultima_preventiva": null,
+   "obs_recente": null,
+   "historico": [
+    [
+     "2026-07-03",
+     2227
+    ],
+    [
+     "2026-07-08",
+     2128
+    ],
+    [
+     "2026-07-15",
+     1993
+    ],
+    [
+     "2026-08-06",
+     1522
+    ],
+    [
+     "2026-08-19",
+     1423
+    ],
+    [
+     "2026-09-02",
+     1339
+    ],
+    [
+     "2026-09-09",
+     1244
+    ]
+   ]
+  },
+  {
+   "id": "12432395173",
+   "tag": "M27",
+   "local": "MESPACK C",
+   "equip": "TINTA CODELINE",
+   "familia": "Codeline",
+   "serie": "2307050N",
+   "tipo": "Regressivo",
+   "freq": 6000,
+   "horimetro": 1310,
+   "horimetro_total": 6000,
+   "restantes": 1310,
+   "pct_consumido": 78.2,
+   "status": "EM_DIA",
+   "dias_24h": 55,
+   "taxa_h_dia": 15.4,
+   "dias_previstos": 85,
+   "previsao": "2026-12-19",
+   "ultima_coleta": "2026-09-24",
+   "dias_sem_coleta": 1,
+   "coleta_vencida": false,
+   "ultima_preventiva": "2026-09-24",
+   "obs_recente": null,
+   "historico": [
+    [
+     "2026-07-03",
+     1646
+    ],
+    [
+     "2026-07-08",
+     1554
+    ],
+    [
+     "2026-07-15",
+     1426
+    ],
+    [
+     "2026-08-19",
+     1069
+    ],
+    [
+     "2026-09-02",
+     769
+    ],
+    [
+     "2026-09-09",
+     601
+    ],
+    [
+     "2026-09-24",
+     1310
+    ]
+   ]
+  },
+  {
+   "id": "12432254435",
+   "tag": "M11",
+   "local": "OFICINA",
+   "equip": "HITACHI RX2 11",
+   "familia": "Hitachi",
+   "serie": "2520312709",
+   "tipo": "Crescente",
+   "freq": 2000,
+   "horimetro": 550,
+   "horimetro_total": 2000,
+   "restantes": 1450,
+   "pct_consumido": 27.5,
+   "status": "EM_DIA",
+   "dias_24h": 60,
+   "taxa_h_dia": 8.6,
+   "dias_previstos": 169,
+   "previsao": "2027-03-13",
+   "ultima_coleta": "2026-09-09",
+   "dias_sem_coleta": 16,
+   "coleta_vencida": true,
+   "ultima_preventiva": "2026-07-08",
+   "obs_recente": "Precisamos agendar uma preventiva",
+   "historico": [
+    [
+     "2026-07-03",
+     2600
+    ],
+    [
+     "2026-07-08",
+     9
+    ],
+    [
+     "2026-07-15",
+     9
+    ],
+    [
+     "2026-08-06",
+     311
+    ],
+    [
+     "2026-08-19",
+     549
+    ],
+    [
+     "2026-09-02",
+     550
+    ],
+    [
+     "2026-09-09",
+     550
+    ]
+   ]
+  },
+  {
+   "id": "12432117629",
+   "tag": "M01",
+   "local": "1,7KG",
+   "equip": "HITACHI PB 01",
+   "familia": "Hitachi",
+   "serie": "22179209",
+   "tipo": "Crescente",
+   "freq": 2000,
+   "horimetro": 521,
+   "horimetro_total": 2000,
+   "restantes": 1479,
+   "pct_consumido": 26.1,
+   "status": "EM_DIA",
+   "dias_24h": 62,
+   "taxa_h_dia": null,
+   "dias_previstos": null,
+   "previsao": null,
+   "ultima_coleta": null,
+   "dias_sem_coleta": null,
+   "coleta_vencida": true,
+   "ultima_preventiva": null,
+   "obs_recente": null,
+   "historico": []
+  },
+  {
+   "id": "12432247776",
+   "tag": "M10",
+   "local": "S1",
+   "equip": "HITACHI PB 10",
+   "familia": "Hitachi",
+   "serie": "15206006",
+   "tipo": "Crescente",
+   "freq": 2000,
+   "horimetro": 143,
+   "horimetro_total": 2000,
+   "restantes": 1857,
+   "pct_consumido": 7.1,
+   "status": "EM_DIA",
+   "dias_24h": 77,
+   "taxa_h_dia": 17.6,
+   "dias_previstos": 106,
+   "previsao": "2027-01-09",
+   "ultima_coleta": "2026-09-24",
+   "dias_sem_coleta": 1,
+   "coleta_vencida": false,
+   "ultima_preventiva": "2026-09-24",
+   "obs_recente": null,
+   "historico": [
+    [
+     "2026-07-03",
+     555
+    ],
+    [
+     "2026-07-08",
+     605
+    ],
+    [
+     "2026-07-15",
+     772
+    ],
+    [
+     "2026-08-06",
+     1221
+    ],
+    [
+     "2026-08-19",
+     1491
+    ],
+    [
+     "2026-09-02",
+     1621
+    ],
+    [
+     "2026-09-09",
+     1751
+    ],
+    [
+     "2026-09-24",
+     143
+    ]
+   ]
+  },
+  {
+   "id": "12432246787",
+   "tag": "M15",
+   "local": "MESPACK D",
+   "equip": "CODELINE 445632",
+   "familia": "Codeline",
+   "serie": "2201077N",
+   "tipo": "Regressivo",
+   "freq": 6000,
+   "horimetro": 2227,
+   "horimetro_total": 6000,
+   "restantes": 2227,
+   "pct_consumido": 62.9,
+   "status": "EM_DIA",
+   "dias_24h": 93,
+   "taxa_h_dia": null,
+   "dias_previstos": null,
+   "previsao": null,
+   "ultima_coleta": null,
+   "dias_sem_coleta": null,
+   "coleta_vencida": true,
+   "ultima_preventiva": null,
+   "obs_recente": null,
+   "historico": []
+  },
+  {
+   "id": "12432249311",
+   "tag": "M18",
+   "local": "MESPACK R1",
+   "equip": "VIDEOJET 03",
+   "familia": "Videojet",
+   "serie": "24003015C65ZH",
+   "tipo": "Crescente",
+   "freq": 4500,
+   "horimetro": 2121,
+   "horimetro_total": 5000,
+   "restantes": 2379,
+   "pct_consumido": 47.1,
+   "status": "EM_DIA",
+   "dias_24h": 99,
+   "taxa_h_dia": 22.9,
+   "dias_previstos": 104,
+   "previsao": "2027-01-07",
+   "ultima_coleta": "2026-09-24",
+   "dias_sem_coleta": 1,
+   "coleta_vencida": false,
+   "ultima_preventiva": null,
+   "obs_recente": null,
+   "historico": [
+    [
+     "2026-07-03",
+     222
+    ],
+    [
+     "2026-07-08",
+     314
+    ],
+    [
+     "2026-07-15",
+     481
+    ],
+    [
+     "2026-08-06",
+     959
+    ],
+    [
+     "2026-08-19",
+     1271
+    ],
+    [
+     "2026-09-02",
+     1605
+    ],
+    [
+     "2026-09-09",
+     1764
+    ],
+    [
+     "2026-09-24",
+     2121
+    ]
+   ]
+  },
+  {
+   "id": "12432254868",
+   "tag": "M22",
+   "local": "MESPACK F",
+   "equip": "TINTA CODELINE",
+   "familia": "Codeline",
+   "serie": "2563027V",
+   "tipo": "Regressivo",
+   "freq": 6000,
+   "horimetro": 3415,
+   "horimetro_total": 6000,
+   "restantes": 3415,
+   "pct_consumido": 43.1,
+   "status": "EM_DIA",
+   "dias_24h": 142,
+   "taxa_h_dia": 22.5,
+   "dias_previstos": 152,
+   "previsao": "2027-02-24",
+   "ultima_coleta": "2026-09-24",
+   "dias_sem_coleta": 1,
+   "coleta_vencida": false,
+   "ultima_preventiva": null,
+   "obs_recente": null,
+   "historico": [
+    [
+     "2026-07-03",
+     5280
+    ],
+    [
+     "2026-07-08",
+     5181
+    ],
+    [
+     "2026-07-15",
+     5036
+    ],
+    [
+     "2026-08-06",
+     4535
+    ],
+    [
+     "2026-08-19",
+     4242
+    ],
+    [
+     "2026-09-02",
+     3921
+    ],
+    [
+     "2026-09-09",
+     3772
+    ],
+    [
+     "2026-09-24",
+     3415
+    ]
+   ]
+  },
+  {
+   "id": "12432281638",
+   "tag": "M16",
+   "local": "MESPACK R2",
+   "equip": "VIDEOJET 01",
+   "familia": "Videojet",
+   "serie": "24003012C65ZH",
+   "tipo": "Crescente",
+   "freq": 4500,
+   "horimetro": 1078,
+   "horimetro_total": 5000,
+   "restantes": 3422,
+   "pct_consumido": 24.0,
+   "status": "EM_DIA",
+   "dias_24h": 143,
+   "taxa_h_dia": 13.0,
+   "dias_previstos": 264,
+   "previsao": "2027-06-16",
+   "ultima_coleta": "2026-09-24",
+   "dias_sem_coleta": 1,
+   "coleta_vencida": false,
+   "ultima_preventiva": null,
+   "obs_recente": null,
+   "historico": [
+    [
+     "2026-07-03",
+     2
+    ],
+    [
+     "2026-07-08",
+     36
+    ],
+    [
+     "2026-07-15",
+     142
+    ],
+    [
+     "2026-08-06",
+     312
+    ],
+    [
+     "2026-08-19",
+     312
+    ],
+    [
+     "2026-09-02",
+     552
+    ],
+    [
+     "2026-09-09",
+     720
+    ],
+    [
+     "2026-09-24",
+     1078
+    ]
+   ]
+  },
+  {
+   "id": "12432249164",
+   "tag": "M24",
+   "local": "MESPACK E",
+   "equip": "TINTA CODELINE",
+   "familia": "Codeline",
+   "serie": "2563050V",
+   "tipo": "Regressivo",
+   "freq": 6000,
+   "horimetro": 3457,
+   "horimetro_total": 6000,
+   "restantes": 3457,
+   "pct_consumido": 42.4,
+   "status": "EM_DIA",
+   "dias_24h": 144,
+   "taxa_h_dia": 22.2,
+   "dias_previstos": 156,
+   "previsao": "2027-02-28",
+   "ultima_coleta": "2026-09-24",
+   "dias_sem_coleta": 1,
+   "coleta_vencida": false,
+   "ultima_preventiva": null,
+   "obs_recente": null,
+   "historico": [
+    [
+     "2026-07-03",
+     5296
+    ],
+    [
+     "2026-07-08",
+     5197
+    ],
+    [
+     "2026-07-15",
+     5051
+    ],
+    [
+     "2026-08-06",
+     4554
+    ],
+    [
+     "2026-08-19",
+     4303
+    ],
+    [
+     "2026-09-02",
+     3979
+    ],
+    [
+     "2026-09-09",
+     3812
+    ],
+    [
+     "2026-09-24",
+     3457
+    ]
+   ]
+  },
+  {
+   "id": "12432254457",
+   "tag": "M21",
+   "local": "MESPACK B",
+   "equip": "TINTA CODELINE",
+   "familia": "Codeline",
+   "serie": "2563056V",
+   "tipo": "Regressivo",
+   "freq": 6000,
+   "horimetro": 3517,
+   "horimetro_total": 6000,
+   "restantes": 3517,
+   "pct_consumido": 41.4,
+   "status": "EM_DIA",
+   "dias_24h": 147,
+   "taxa_h_dia": 20.7,
+   "dias_previstos": 170,
+   "previsao": "2027-03-14",
+   "ultima_coleta": "2026-09-24",
+   "dias_sem_coleta": 1,
+   "coleta_vencida": false,
+   "ultima_preventiva": null,
+   "obs_recente": null,
+   "historico": [
+    [
+     "2026-07-03",
+     5282
+    ],
+    [
+     "2026-07-08",
+     5183
+    ],
+    [
+     "2026-07-15",
+     5059
+    ],
+    [
+     "2026-08-06",
+     4591
+    ],
+    [
+     "2026-08-19",
+     4273
+    ],
+    [
+     "2026-09-02",
+     3943
+    ],
+    [
+     "2026-09-09",
+     3841
+    ],
+    [
+     "2026-09-24",
+     3517
+    ]
+   ]
+  },
+  {
+   "id": "12432274119",
+   "tag": "M20",
+   "local": "OFICINA",
+   "equip": "TINTA CODELINE",
+   "familia": "Codeline",
+   "serie": "2563052V",
+   "tipo": "Regressivo",
+   "freq": 6000,
+   "horimetro": 3674,
+   "horimetro_total": 6000,
+   "restantes": 3674,
+   "pct_consumido": 38.8,
+   "status": "EM_DIA",
+   "dias_24h": 153,
+   "taxa_h_dia": 19.5,
+   "dias_previstos": 189,
+   "previsao": "2027-04-02",
+   "ultima_coleta": "2026-09-24",
+   "dias_sem_coleta": 1,
+   "coleta_vencida": false,
+   "ultima_preventiva": "2026-09-09",
+   "obs_recente": null,
+   "historico": [
+    [
+     "2026-07-03",
+     5202
+    ],
+    [
+     "2026-07-08",
+     5103
+    ],
+    [
+     "2026-07-15",
+     4957
+    ],
+    [
+     "2026-08-06",
+     4529
+    ],
+    [
+     "2026-08-19",
+     4229
+    ],
+    [
+     "2026-09-02",
+     1435
+    ],
+    [
+     "2026-09-09",
+     3908
+    ],
+    [
+     "2026-09-24",
+     3674
+    ]
+   ]
+  },
+  {
+   "id": "12432251459",
+   "tag": "M17",
+   "local": "S2",
+   "equip": "VIDEOJET 02",
+   "familia": "Videojet",
+   "serie": "24003014C65ZH",
+   "tipo": "Crescente",
+   "freq": 4500,
+   "horimetro": 211,
+   "horimetro_total": 5000,
+   "restantes": 4289,
+   "pct_consumido": 4.7,
+   "status": "EM_DIA",
+   "dias_24h": 179,
+   "taxa_h_dia": 16.9,
+   "dias_previstos": 254,
+   "previsao": "2027-06-06",
+   "ultima_coleta": "2026-09-24",
+   "dias_sem_coleta": 1,
+   "coleta_vencida": false,
+   "ultima_preventiva": "2026-09-02",
+   "obs_recente": "Agendar preventiva",
+   "historico": [
+    [
+     "2026-07-03",
+     3960
+    ],
+    [
+     "2026-07-08",
+     4051
+    ],
+    [
+     "2026-07-15",
+     4219
+    ],
+    [
+     "2026-08-06",
+     4686
+    ],
+    [
+     "2026-08-19",
+     4988
+    ],
+    [
+     "2026-09-02",
+     74
+    ],
+    [
+     "2026-09-09",
+     74
+    ],
+    [
+     "2026-09-24",
+     211
+    ]
+   ]
+  },
+  {
+   "id": "12440681427",
+   "tag": "M28",
+   "local": "OFICINA",
+   "equip": "TINTA CODELINE",
+   "familia": "Codeline",
+   "serie": "2563026",
+   "tipo": "Regressivo",
+   "freq": 6000,
+   "horimetro": 4647,
+   "horimetro_total": 6000,
+   "restantes": 4647,
+   "pct_consumido": 22.6,
+   "status": "EM_DIA",
+   "dias_24h": 194,
+   "taxa_h_dia": 20.0,
+   "dias_previstos": 233,
+   "previsao": "2027-05-16",
+   "ultima_coleta": "2026-08-06",
+   "dias_sem_coleta": 50,
+   "coleta_vencida": true,
+   "ultima_preventiva": null,
+   "obs_recente": null,
+   "historico": [
+    [
+     "2026-07-03",
+     5460
+    ],
+    [
+     "2026-07-08",
+     5226
+    ],
+    [
+     "2026-07-15",
+     5133
+    ],
+    [
+     "2026-08-06",
+     4647
+    ]
+   ]
+  },
+  {
+   "id": "12432265835",
+   "tag": "M19",
+   "local": "4KG",
+   "equip": "CODELINE SS5632",
+   "familia": "Codeline",
+   "serie": "SS5632",
+   "tipo": "Regressivo",
+   "freq": 6000,
+   "horimetro": 5909,
+   "horimetro_total": 6000,
+   "restantes": 5909,
+   "pct_consumido": 1.5,
+   "status": "EM_DIA",
+   "dias_24h": 246,
+   "taxa_h_dia": null,
+   "dias_previstos": null,
+   "previsao": null,
+   "ultima_coleta": "2026-08-19",
+   "dias_sem_coleta": 37,
+   "coleta_vencida": true,
+   "ultima_preventiva": null,
+   "obs_recente": null,
+   "historico": [
+    [
+     "2026-08-19",
+     5909
+    ]
+   ]
+  },
+  {
+   "id": "12432131919",
+   "tag": "M02",
+   "local": "OFICINA",
+   "equip": "HITACHI PB 02",
+   "familia": "Hitachi",
+   "serie": "15026006",
+   "tipo": "Crescente",
+   "freq": 2000,
+   "horimetro": null,
+   "horimetro_total": null,
+   "restantes": null,
+   "pct_consumido": null,
+   "status": "SEM_LEITURA",
+   "dias_24h": null,
+   "taxa_h_dia": null,
+   "dias_previstos": null,
+   "previsao": null,
+   "ultima_coleta": null,
+   "dias_sem_coleta": null,
+   "coleta_vencida": true,
+   "ultima_preventiva": null,
+   "obs_recente": null,
+   "historico": []
+  },
+  {
+   "id": "12432248894",
+   "tag": "M05",
+   "local": "60L2",
+   "equip": "HITACHI PB 05",
+   "familia": "Hitachi",
+   "serie": "18951109",
+   "tipo": "Crescente",
+   "freq": 2000,
+   "horimetro": null,
+   "horimetro_total": null,
+   "restantes": null,
+   "pct_consumido": null,
+   "status": "SEM_LEITURA",
+   "dias_24h": null,
+   "taxa_h_dia": null,
+   "dias_previstos": null,
+   "previsao": null,
+   "ultima_coleta": null,
+   "dias_sem_coleta": null,
+   "coleta_vencida": true,
+   "ultima_preventiva": null,
+   "obs_recente": null,
+   "historico": []
+  },
+  {
+   "id": "12432275569",
+   "tag": "M06",
+   "local": "MESPACK C",
+   "equip": "HITACHI PB 06",
+   "familia": "Hitachi",
+   "serie": "22172209",
+   "tipo": "Crescente",
+   "freq": 2000,
+   "horimetro": null,
+   "horimetro_total": null,
+   "restantes": null,
+   "pct_consumido": null,
+   "status": "SEM_LEITURA",
+   "dias_24h": null,
+   "taxa_h_dia": null,
+   "dias_previstos": null,
+   "previsao": null,
+   "ultima_coleta": null,
+   "dias_sem_coleta": null,
+   "coleta_vencida": true,
+   "ultima_preventiva": null,
+   "obs_recente": null,
+   "historico": []
+  },
+  {
+   "id": "12432242425",
+   "tag": "M07",
+   "local": "OFICINA",
+   "equip": "HITACHI PB 07",
+   "familia": "Hitachi",
+   "serie": null,
+   "tipo": "Crescente",
+   "freq": 2000,
+   "horimetro": null,
+   "horimetro_total": null,
+   "restantes": null,
+   "pct_consumido": null,
+   "status": "SEM_LEITURA",
+   "dias_24h": null,
+   "taxa_h_dia": null,
+   "dias_previstos": null,
+   "previsao": null,
+   "ultima_coleta": null,
+   "dias_sem_coleta": null,
+   "coleta_vencida": true,
+   "ultima_preventiva": null,
+   "obs_recente": null,
+   "historico": []
+  }
+ ]
+}

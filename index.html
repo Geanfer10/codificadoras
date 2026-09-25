@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Horímetro Codificadoras</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+<style>
+:root{
+  --verde:#1E9350; --verde-esc:#0F5E32; --verde-claro:#E8F5EC;
+  --bg:#F4F7F5; --card:#FFFFFF; --txt:#1B2A22; --muted:#6B7C72; --borda:#DDE6E0;
+  --vermelho:#D93A3A; --amarelo:#E0A21E; --cinza:#8A9690; --azul:#2E6FD9;
+  --graf-bg:#15201A; --graf-grid:#2A3A31; --graf-txt:#C9D6CE;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--txt);min-height:100vh}
+.mono{font-family:'JetBrains Mono',monospace}
+
+header{background:linear-gradient(90deg,var(--verde-esc),var(--verde));color:#fff;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+header h1{font-size:22px;font-weight:800;letter-spacing:.3px}
+header h1 small{display:block;font-size:12px;font-weight:500;opacity:.85;letter-spacing:1.5px;text-transform:uppercase}
+.hdr-dir{display:flex;align-items:center;gap:16px;font-size:13px}
+.relogio{font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:700}
+.atual{opacity:.9;text-align:right;line-height:1.4}
+.btn{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);color:#fff;border-radius:8px;padding:7px 12px;font:600 13px Inter,system-ui,sans-serif;cursor:pointer}
+.btn:hover{background:rgba(255,255,255,.28)}
+
+main{padding:18px 24px 30px;max-width:1800px;margin:0 auto}
+
+.kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-bottom:18px}
+.kpi{background:var(--card);border-radius:12px;padding:14px 16px;border-left:6px solid var(--cinza);box-shadow:0 1px 3px rgba(0,0,0,.06);cursor:pointer;transition:transform .1s}
+.kpi:hover{transform:translateY(-2px)}
+.kpi.ativo{outline:3px solid var(--txt)}
+.kpi .rot{font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.8px}
+.kpi .val{font-family:'JetBrains Mono',monospace;font-size:38px;font-weight:700;line-height:1.1;margin-top:4px}
+.kpi .sub{font-size:12px;color:var(--muted)}
+.k-total{border-color:var(--verde-esc)} .k-atr{border-color:var(--vermelho)} .k-atr .val{color:var(--vermelho)}
+.k-pen{border-color:var(--amarelo)} .k-pen .val{color:var(--amarelo)} .k-dia{border-color:var(--verde)} .k-dia .val{color:var(--verde)}
+.k-sem{border-color:var(--cinza)} .k-sem .val{color:var(--cinza)} .k-col{border-color:var(--azul)} .k-col .val{color:var(--azul)}
+
+.barra-filtros{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{border:1px solid var(--borda);background:#fff;border-radius:20px;padding:6px 14px;font:600 13px Inter,system-ui,sans-serif;color:var(--txt);cursor:pointer}
+.chip.on{background:var(--verde);border-color:var(--verde);color:#fff}
+.busca{margin-left:auto;border:1px solid var(--borda);border-radius:8px;padding:8px 12px;font:14px Inter,system-ui,sans-serif;min-width:240px}
+
+.layout{display:grid;grid-template-columns:1fr 520px;gap:18px;align-items:start}
+.grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+
+.maq{background:var(--card);border-radius:12px;padding:12px 14px;box-shadow:0 1px 3px rgba(0,0,0,.06);border-top:5px solid var(--cinza);cursor:pointer;position:relative;transition:box-shadow .15s}
+.maq:hover{box-shadow:0 4px 14px rgba(0,0,0,.12)}
+.maq.ATRASADO{border-color:var(--vermelho);background:#FFF6F6}
+.maq.PENDENTE{border-color:var(--amarelo);background:#FFFBF0}
+.maq.EM_DIA{border-color:var(--verde)}
+.maq.SEM_LEITURA{border-color:var(--cinza);background:#F7F8F8}
+.maq .topo{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.tag{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:20px}
+.local{font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase}
+.equip{font-size:12px;color:var(--muted);margin-top:2px}
+.selo{font-size:11px;font-weight:700;border-radius:6px;padding:3px 8px;white-space:nowrap;color:#fff;background:var(--cinza)}
+.ATRASADO .selo{background:var(--vermelho)} .PENDENTE .selo{background:var(--amarelo)} .EM_DIA .selo{background:var(--verde)}
+.restam{margin-top:10px;display:flex;align-items:baseline;gap:6px}
+.restam .n{font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:700}
+.ATRASADO .restam .n{color:var(--vermelho)}
+.restam .u{font-size:12px;color:var(--muted)}
+.prog{height:9px;background:#E7ECE9;border-radius:6px;overflow:hidden;margin:8px 0 6px}
+.prog i{display:block;height:100%;background:var(--verde);border-radius:6px}
+.ATRASADO .prog i{background:var(--vermelho)} .PENDENTE .prog i{background:var(--amarelo)}
+.rodape{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);gap:6px;flex-wrap:wrap}
+.rodape b{font-family:'JetBrains Mono',monospace;color:var(--txt);font-weight:600}
+.alerta-col{color:var(--azul);font-weight:600}
+.tipo-ico{font-size:11px;font-weight:600;color:var(--muted);border:1px solid var(--borda);border-radius:4px;padding:1px 5px;margin-left:4px}
+
+.painel-graf{background:var(--graf-bg);border-radius:12px;padding:14px 16px;color:var(--graf-txt);position:sticky;top:12px}
+.painel-graf h2{font-size:14px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#fff;margin-bottom:2px}
+.painel-graf p{font-size:12px;opacity:.7;margin-bottom:8px}
+.graf-wrap{position:relative}
+
+.vazio{padding:40px;text-align:center;color:var(--muted);grid-column:1/-1}
+.erro{background:#FFF0F0;border:1px solid #F3C4C4;color:#8A1F1F;padding:14px;border-radius:10px;margin-bottom:14px;display:none}
+
+/* Modal */
+.modal-bg{position:fixed;inset:0;background:rgba(10,20,15,.55);display:none;align-items:center;justify-content:center;z-index:50;padding:16px}
+.modal-bg.aberto{display:flex}
+.modal{background:#fff;border-radius:14px;max-width:900px;width:100%;max-height:92vh;overflow:auto;padding:20px 22px}
+.modal .cab{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:12px}
+.modal h3{font-size:22px}
+.fechar{background:none;border:none;font-size:28px;cursor:pointer;color:var(--muted);line-height:1}
+.info{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+.info div{background:var(--bg);border-radius:8px;padding:8px 10px}
+.info span{display:block;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.6px}
+.info b{font-family:'JetBrains Mono',monospace;font-size:16px}
+.graf-modal{background:var(--graf-bg);border-radius:10px;padding:12px;height:300px}
+.obs{margin-top:12px;background:#FFF8E6;border-left:4px solid var(--amarelo);padding:8px 12px;border-radius:6px;font-size:14px}
+.tabela{width:100%;border-collapse:collapse;margin-top:14px;font-size:13px}
+.tabela th{text-align:left;color:var(--muted);font-weight:600;border-bottom:2px solid var(--borda);padding:6px}
+.tabela td{padding:6px;border-bottom:1px solid var(--borda)}
+.tabela td.num{font-family:'JetBrains Mono',monospace;text-align:right}
+
+@media (max-width:1300px){.layout{grid-template-columns:1fr}.painel-graf{position:static}}
+@media (max-width:900px){.kpis{grid-template-columns:repeat(3,1fr)}.info{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){
+  header{padding:12px 16px} main{padding:14px 16px}
+  .kpis{grid-template-columns:repeat(2,1fr)} .kpi .val{font-size:30px}
+  .busca{margin-left:0;min-width:0;width:100%}
+}
+</style>
+</head>
+<body>
+<header>
+  <h1><small>Goiás Verde · PCM</small>Controle de Horímetro — Codificadoras</h1>
+  <div class="hdr-dir">
+    <div class="atual" id="atualizado">Carregando…</div>
+    <div class="relogio" id="relogio">--:--</div>
+    <button class="btn" id="btnTela" title="Tela cheia">⛶ TV</button>
+  </div>
+</header>
+
+<main>
+  <div class="erro" id="erro"></div>
+
+  <section class="kpis" id="kpis"></section>
+
+  <div class="barra-filtros">
+    <div class="chips" id="chipsFam"></div>
+    <input class="busca" id="busca" placeholder="Buscar TAG, local, equipamento ou nº série…">
+  </div>
+
+  <div class="layout">
+    <section class="grade" id="grade"></section>
+    <aside class="painel-graf">
+      <h2>Consumo do ciclo de preventiva</h2>
+      <p>% do intervalo de PM já utilizado — linha tracejada = 100%</p>
+      <div class="graf-wrap" id="grafWrap"><canvas id="grafConsumo"></canvas></div>
+    </aside>
+  </div>
+</main>
+
+<div class="modal-bg" id="modalBg">
+  <div class="modal" role="dialog" aria-modal="true">
+    <div class="cab">
+      <div>
+        <h3 id="mTitulo"></h3>
+        <div class="equip" id="mSub"></div>
+      </div>
+      <button class="fechar" id="mFechar" aria-label="Fechar">×</button>
+    </div>
+    <div class="info" id="mInfo"></div>
+    <div class="graf-modal"><canvas id="grafHist"></canvas></div>
+    <div id="mObs"></div>
+    <table class="tabela" id="mTabela"></table>
+  </div>
+</div>
+
+<script>
+const ARQ = 'data/dados.json';
+const RECARREGA_MIN = 5;
+const ROT = {ATRASADO:'🔴 ATRASADO', PENDENTE:'🟡 PENDENTE', EM_DIA:'🟢 EM DIA', SEM_LEITURA:'⚪ SEM LEITURA'};
+const COR = {ATRASADO:'#D93A3A', PENDENTE:'#E0A21E', EM_DIA:'#1E9350', SEM_LEITURA:'#8A9690'};
+Chart.register(ChartDataLabels);
+
+let DADOS = null, filtroStatus = null, filtroFam = 'Todas', grafC = null, grafH = null;
+
+const $ = s => document.querySelector(s);
+const fmt = n => n == null ? '—' : Number(n).toLocaleString('pt-BR');
+const fData = iso => { if(!iso) return '—'; const [a,m,d] = iso.split('-'); return `${d}/${m}/${a}`; };
+const fDataCurta = iso => { if(!iso) return '—'; const [a,m,d] = iso.split('-'); return `${d}/${m}`; };
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+async function carregar(){
+  try{
+    const r = await fetch(ARQ + '?t=' + Date.now(), {cache:'no-store'});
+    if(!r.ok) throw new Error('HTTP ' + r.status);
+    DADOS = await r.json();
+    $('#erro').style.display = 'none';
+    render();
+  }catch(e){
+    const el = $('#erro');
+    el.textContent = 'Não foi possível carregar os dados (' + e.message + '). Se abriu o arquivo direto do computador, use o link do GitHub Pages.';
+    el.style.display = 'block';
+  }
+}
+
+function render(){
+  const at = new Date(DADOS.atualizado_em);
+  $('#atualizado').innerHTML = 'Atualizado em<br><b class="mono">' +
+    at.toLocaleDateString('pt-BR') + ' ' + at.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'}) + '</b>';
+  renderKpis(); renderChips(); renderGrade(); renderGrafico();
+}
+
+function renderKpis(){
+  const r = DADOS.resumo, p = DADOS.parametros;
+  const itens = [
+    ['k-total', null, 'Total', r.total, 'codificadoras'],
+    ['k-atr', 'ATRASADO', 'Atrasado', r.atrasado, 'PM vencida'],
+    ['k-pen', 'PENDENTE', 'Pendente', r.pendente, `≤ ${p.limite_pendente_h} h restantes`],
+    ['k-dia', 'EM_DIA', 'Em dia', r.em_dia, `> ${p.limite_pendente_h} h restantes`],
+    ['k-sem', 'SEM_LEITURA', 'Sem leitura', r.sem_leitura, 'horímetro vazio'],
+    ['k-col', 'COLETA', 'Coleta vencida', r.coleta_vencida, `> ${p.coleta_vencida_dias} dias sem leitura`],
+  ];
+  $('#kpis').innerHTML = itens.map(([c,f,rot,v,sub]) =>
+    `<div class="kpi ${c} ${filtroStatus===f && f ? 'ativo':''}" data-f="${f??''}">
+       <div class="rot">${rot}</div><div class="val">${v}</div><div class="sub">${sub}</div></div>`).join('');
+  document.querySelectorAll('.kpi').forEach(k => k.onclick = () => {
+    const f = k.dataset.f || null;
+    filtroStatus = (filtroStatus === f) ? null : f;
+    renderKpis(); renderGrade(); renderGrafico();
+  });
+}
+
+function renderChips(){
+  const fams = ['Todas', ...new Set(DADOS.maquinas.map(m => m.familia))];
+  $('#chipsFam').innerHTML = fams.map(f => `<button class="chip ${f===filtroFam?'on':''}" data-f="${f}">${f}</button>`).join('');
+  document.querySelectorAll('.chip').forEach(c => c.onclick = () => { filtroFam = c.dataset.f; renderChips(); renderGrade(); renderGrafico(); });
+}
+
+function filtradas(){
+  const q = $('#busca').value.trim().toLowerCase();
+  return DADOS.maquinas.filter(m => {
+    if(filtroFam !== 'Todas' && m.familia !== filtroFam) return false;
+    if(filtroStatus === 'COLETA'){ if(!m.coleta_vencida) return false; }
+    else if(filtroStatus && m.status !== filtroStatus) return false;
+    if(q && ![m.tag,m.local,m.equip,m.serie].some(x => (x||'').toLowerCase().includes(q))) return false;
+    return true;
+  });
+}
+
+function renderGrade(){
+  const lista = filtradas();
+  if(!lista.length){ $('#grade').innerHTML = '<div class="vazio">Nenhuma codificadora neste filtro.</div>'; return; }
+  $('#grade').innerHTML = lista.map(m => {
+    const pct = Math.min(m.pct_consumido ?? 0, 100);
+    let restTxt, unid;
+    if(m.status === 'SEM_LEITURA'){ restTxt = '—'; unid = 'sem leitura registrada'; }
+    else if(m.restantes <= 0){ restTxt = fmt(Math.abs(m.restantes)); unid = 'h além do limite'; }
+    else { restTxt = fmt(m.restantes); unid = 'h restantes'; }
+    const prev = m.previsao ? `PM prevista <b>${fDataCurta(m.previsao)}</b>` :
+                 (m.status==='ATRASADO' ? '<b style="color:var(--vermelho)">Agendar PM</b>' : 'Previsão <b>—</b>');
+    const col = m.ultima_coleta
+      ? `<span class="${m.coleta_vencida?'alerta-col':''}">Coleta <b>${fDataCurta(m.ultima_coleta)}</b>${m.coleta_vencida?' ⚠':''}</span>`
+      : '<span class="alerta-col">Sem coleta ⚠</span>';
+    return `<div class="maq ${m.status}" data-id="${m.id}">
+      <div class="topo">
+        <div><span class="tag">${esc(m.tag)}</span><span class="tipo-ico">${m.tipo==='Regressivo'?'▼ REG':'▲ CRES'}</span>
+          <div class="local">${esc(m.local)}</div></div>
+        <span class="selo">${ROT[m.status].replace(/^\S+ /,'')}</span>
+      </div>
+      <div class="equip">${esc(m.equip)} · Série ${esc(m.serie||'—')}</div>
+      <div class="restam"><span class="n">${restTxt}</span><span class="u">${unid}</span></div>
+      <div class="prog"><i style="width:${pct}%"></i></div>
+      <div class="rodape"><span>${prev}</span>${col}</div>
+    </div>`;
+  }).join('');
+  document.querySelectorAll('.maq').forEach(c => c.onclick = () => abrirModal(c.dataset.id));
+}
+
+function renderGrafico(){
+  const lista = filtradas().filter(m => m.pct_consumido != null)
+    .sort((a,b) => b.pct_consumido - a.pct_consumido);
+  $('#grafWrap').style.height = Math.max(160, lista.length * 26 + 40) + 'px';
+  const dados = {
+    labels: lista.map(m => `${m.tag} · ${m.local}`),
+    datasets: [{
+      data: lista.map(m => m.pct_consumido),
+      backgroundColor: lista.map(m => COR[m.status]),
+      borderRadius: 4, barThickness: 16,
+    }]
+  };
+  const linha100 = {id:'l100', afterDraw(ch){
+    const x = ch.scales.x.getPixelForValue(100), {top,bottom} = ch.chartArea, c = ch.ctx;
+    c.save(); c.strokeStyle='#ffffffaa'; c.setLineDash([5,4]); c.lineWidth=1.5;
+    c.beginPath(); c.moveTo(x,top); c.lineTo(x,bottom); c.stroke(); c.restore();
+  }};
+  if(grafC) grafC.destroy();
+  grafC = new Chart($('#grafConsumo'), {
+    type:'bar', data:dados, plugins:[linha100],
+    options:{
+      indexAxis:'y', responsive:true, maintainAspectRatio:false, animation:false,
+      layout:{padding:{right:44}},
+      scales:{
+        x:{min:0, suggestedMax:110, grid:{color:'#2A3A31'}, ticks:{color:'#C9D6CE', callback:v=>v+'%'}},
+        y:{grid:{display:false}, ticks:{color:'#E6EEE9', font:{family:'JetBrains Mono', size:11}}}
+      },
+      plugins:{
+        legend:{display:false},
+        tooltip:{callbacks:{label:c=>{const m=lista[c.dataIndex];return ` ${c.raw}% · ${fmt(m.restantes)} h restantes`;}}},
+        datalabels:{anchor:'end', align:'right', color:'#fff', font:{family:'JetBrains Mono', weight:'bold', size:11},
+          formatter:v=>Math.round(v)+'%', clip:false}
+      },
+      onClick:(e,els)=>{ if(els.length) abrirModal(lista[els[0].index].id); }
+    }
+  });
+}
+
+function abrirModal(id){
+  const m = DADOS.maquinas.find(x => x.id === id); if(!m) return;
+  $('#mTitulo').innerHTML = `${esc(m.tag)} — ${esc(m.local)} <span class="selo" style="background:${COR[m.status]};font-size:13px;vertical-align:middle">${ROT[m.status]}</span>`;
+  $('#mSub').textContent = `${m.equip} · Série ${m.serie||'—'} · Contador ${m.tipo.toLowerCase()} · Frequência PM ${fmt(m.freq)} h`;
+  const info = [
+    ['Horímetro preventiva', fmt(m.horimetro) + ' h'],
+    ['Horas restantes', m.restantes==null?'—':fmt(m.restantes) + ' h'],
+    ['Uso médio real', m.taxa_h_dia==null?'—':m.taxa_h_dia.toLocaleString('pt-BR') + ' h/dia'],
+    ['Previsão da PM', m.previsao ? fData(m.previsao) + ` (${m.dias_previstos} d)` : (m.status==='ATRASADO'?'Vencida':'—')],
+    ['Última coleta', fData(m.ultima_coleta) + (m.dias_sem_coleta!=null?` (${m.dias_sem_coleta} d)`:'')],
+    ['Última PM detectada', fData(m.ultima_preventiva)],
+    ['Consumo do ciclo', m.pct_consumido==null?'—':m.pct_consumido.toLocaleString('pt-BR')+'%'],
+    ['Leituras no histórico', m.historico.length],
+  ];
+  $('#mInfo').innerHTML = info.map(([k,v]) => `<div><span>${k}</span><b>${v}</b></div>`).join('');
+  $('#mObs').innerHTML = m.obs_recente ? `<div class="obs">📝 <b>Última observação do inspetor:</b> ${esc(m.obs_recente)}</div>` : '';
+
+  const h = m.historico;
+  $('#mTabela').innerHTML = h.length
+    ? '<tr><th>Data</th><th style="text-align:right">Horímetro preventiva (h)</th><th style="text-align:right">Variação</th></tr>' +
+      h.slice().reverse().map((r,i,arr) => {
+        const ant = arr[i+1]; const d = ant ? r[1]-ant[1] : null;
+        return `<tr><td>${fData(r[0])}</td><td class="num">${fmt(r[1])}</td><td class="num">${d==null?'—':(d>0?'+':'')+fmt(d)}</td></tr>`;
+      }).join('')
+    : '<tr><td style="color:var(--muted)">Nenhuma leitura registrada no board de coletas para esta TAG.</td></tr>';
+
+  if(grafH) grafH.destroy();
+  const limite = m.tipo==='Regressivo' ? 0 : m.freq;
+  grafH = new Chart($('#grafHist'), {
+    type:'line',
+    data:{labels:h.map(r=>fDataCurta(r[0])), datasets:[
+      {label:'Horímetro', data:h.map(r=>r[1]), borderColor:'#4CD483', backgroundColor:'#4CD48333', fill:true, tension:.25, pointRadius:4, pointBackgroundColor:'#4CD483'},
+      {label:m.tipo==='Regressivo'?'Zero (PM)':'Limite PM', data:h.map(()=>limite), borderColor:'#FF6B6B', borderDash:[6,4], pointRadius:0, datalabels:{display:false}}
+    ]},
+    options:{responsive:true, maintainAspectRatio:false, animation:false,
+      scales:{x:{grid:{color:'#2A3A31'},ticks:{color:'#C9D6CE'}}, y:{beginAtZero:true,grid:{color:'#2A3A31'},ticks:{color:'#C9D6CE',callback:v=>fmt(v)}}},
+      plugins:{legend:{labels:{color:'#E6EEE9'}},
+        datalabels:{align:'top', color:'#fff', font:{family:'JetBrains Mono', size:10}, formatter:v=>fmt(v)}}}
+  });
+  $('#modalBg').classList.add('aberto');
+}
+function fecharModal(){ $('#modalBg').classList.remove('aberto'); }
+$('#mFechar').onclick = fecharModal;
+$('#modalBg').onclick = e => { if(e.target.id === 'modalBg') fecharModal(); };
+document.addEventListener('keydown', e => { if(e.key === 'Escape') fecharModal(); });
+$('#busca').oninput = () => { renderGrade(); renderGrafico(); };
+$('#btnTela').onclick = () => document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen();
+
+function tick(){ $('#relogio').textContent = new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'}); }
+tick(); setInterval(tick, 10000);
+carregar(); setInterval(carregar, RECARREGA_MIN * 60000);
+</script>
+</body>
+</html>
