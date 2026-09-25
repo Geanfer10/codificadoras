@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-09-25T11:48-03:00",
+ "atualizado_em": "2026-09-25T12:04-03:00",
  "parametros": {
   "limite_pendente_h": 200,
   "coleta_vencida_dias": 14,
@@ -879,7 +879,7 @@
    "dias_sem_coleta": 1,
    "coleta_vencida": false,
    "ultima_preventiva": null,
-   "obs_recente": null,
+   "obs_recente": "6000",
    "historico": [
     [
      "2026-07-03",
