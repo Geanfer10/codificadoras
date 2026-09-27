@@ -129,6 +129,104 @@ main{padding:18px 24px 30px;max-width:1800px;margin:0 auto}
   .kpis{grid-template-columns:repeat(2,1fr)} .kpi .val{font-size:30px}
   .busca{margin-left:0;min-width:0;width:100%}
 }
+/* ===== Abas ===== */
+.abas{display:flex;gap:4px;background:#fff;border-bottom:1px solid var(--borda);padding:0 24px;overflow-x:auto}
+.aba{background:none;border:none;border-bottom:4px solid transparent;padding:14px 18px 11px;font:700 14px Inter,system-ui,sans-serif;color:var(--muted);cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:8px}
+.aba:hover{color:var(--txt)}
+.aba.on{color:var(--verde-esc);border-color:var(--verde)}
+.aba .cont{background:var(--vermelho);color:#fff;border-radius:10px;font-size:11px;padding:1px 7px}
+.aba .cont.zero{background:var(--cinza)}
+.proto-tag{margin-left:auto;align-self:center;font:800 11px Inter,system-ui,sans-serif;letter-spacing:1px;color:#7A4B00;background:#FFE7B3;border-radius:6px;padding:4px 10px;white-space:nowrap}
+.painel-aba{display:none} .painel-aba.on{display:block}
+.sec-tit{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:4px 0 12px}
+.sec-tit h2{font-size:20px;font-weight:800}
+.sec-tit p{font-size:13px;color:var(--muted)}
+.mini-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}
+.mini{background:#fff;border-radius:12px;padding:12px 14px;box-shadow:0 1px 3px rgba(0,0,0,.06);border-left:6px solid var(--verde)}
+.mini .rot{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.8px}
+.mini .val{font:700 28px 'JetBrains Mono',monospace;margin-top:2px}
+.mini .sub{font-size:12px;color:var(--muted)}
+.mini.r{border-color:var(--vermelho)} .mini.r .val{color:var(--vermelho)}
+.mini.a{border-color:var(--amarelo)} .mini.a .val{color:#B57E00}
+.mini.b{border-color:var(--azul)} .mini.b .val{color:var(--azul)}
+.mini.g{border-color:var(--cinza)}
+
+/* Cartão: aviso de leitura suspeita */
+.susp{display:inline-flex;align-items:center;gap:4px;font:700 11px Inter,system-ui,sans-serif;color:#7A2E9E;background:#F3E6FA;border:1px solid #DEC3EE;border-radius:5px;padding:2px 6px;margin-top:6px}
+
+/* ===== Calendário ===== */
+.cal{display:grid;grid-template-columns:repeat(var(--cols),minmax(128px,1fr));gap:10px;overflow-x:auto;padding-bottom:6px}
+.col{background:#fff;border-radius:12px;box-shadow:0 1px 3px rgba(0,0,0,.06);display:flex;flex-direction:column;min-height:260px}
+.col .cab-col{padding:10px 12px;border-bottom:1px solid var(--borda);border-top:5px solid var(--verde);border-radius:12px 12px 0 0}
+.col.venc .cab-col{border-top-color:var(--vermelho);background:#FFF6F6}
+.col.perto .cab-col{border-top-color:var(--amarelo)}
+.col.hoje .cab-col{background:var(--verde-claro)}
+.col.depois .cab-col{border-top-color:var(--cinza)}
+.col .sem{font:800 13px Inter,system-ui,sans-serif}
+.col .per{font:500 12px 'JetBrains Mono',monospace;color:var(--muted)}
+.col.depois .pm{padding:4px 8px;display:flex;justify-content:space-between;gap:6px}.col.depois .pm .l{display:none}.col.depois .pm .d{margin:0;font-size:11px;color:var(--muted)}
+.col .qtd{float:right;font:700 20px 'JetBrains Mono',monospace;line-height:1}
+.col.venc .qtd{color:var(--vermelho)}
+.col .lista{padding:8px;display:flex;flex-direction:column;gap:6px}
+.pm{border-radius:8px;padding:7px 9px;border-left:4px solid var(--verde);background:#F6FAF7;cursor:pointer;font-size:12px}
+.pm:hover{background:#E8F5EC}
+.pm b{font:700 14px 'JetBrains Mono',monospace}
+.pm .l{color:var(--muted);font-weight:600;text-transform:uppercase;font-size:11px}
+.pm .d{font-family:'JetBrains Mono',monospace;color:var(--txt);margin-top:2px}
+.pm.Hitachi{border-color:#2E6FD9} .pm.Videojet{border-color:#9B51E0} .pm.Codeline{border-color:#E08A1E}
+.pm.venc{background:#FFF0F0;border-color:var(--vermelho)}
+.pm .sp{color:#7A2E9E}
+.col .vazio-col{color:#B3BDB7;font-size:12px;text-align:center;padding:20px 4px}
+.legenda{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:10px}
+.legenda i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:5px;vertical-align:-2px}
+.carga{background:var(--graf-bg);border-radius:12px;padding:12px 16px;margin-top:16px;height:220px}
+
+/* ===== Qualidade ===== */
+.alertas{display:flex;flex-direction:column;gap:10px}
+.al{background:#fff;border-radius:12px;box-shadow:0 1px 3px rgba(0,0,0,.06);padding:12px 16px;display:grid;grid-template-columns:90px 1fr auto;gap:14px;align-items:center;border-left:6px solid #9B51E0;cursor:pointer}
+.al:hover{box-shadow:0 4px 14px rgba(0,0,0,.12)}
+.al.baixa{border-left-color:var(--cinza);opacity:.85}
+.al .t{font:700 22px 'JetBrains Mono',monospace}
+.al .dt{font:500 12px 'JetBrains Mono',monospace;color:var(--muted)}
+.al .cod{display:inline-block;font:800 11px Inter,system-ui,sans-serif;letter-spacing:.6px;color:#fff;background:#9B51E0;border-radius:5px;padding:2px 7px;margin-bottom:4px}
+.al.baixa .cod{background:var(--cinza)}
+.al .msg{font-size:14px;font-weight:600}
+.al .val{text-align:right;font:600 14px 'JetBrains Mono',monospace;white-space:nowrap}
+.al .val small{display:block;font:500 11px Inter,system-ui,sans-serif;color:var(--muted)}
+.al .seta{color:#9B51E0}
+.regras{margin-top:18px;background:#fff;border-radius:12px;padding:14px 18px;font-size:13px;color:var(--muted);line-height:1.7}
+.regras b{color:var(--txt)}
+
+/* ===== Rota ===== */
+.duas{display:grid;grid-template-columns:1.3fr 1fr;gap:16px;align-items:start}
+.bloco{background:#fff;border-radius:12px;box-shadow:0 1px 3px rgba(0,0,0,.06);padding:14px 16px}
+.bloco h3{font-size:14px;text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px}
+.matriz{border-collapse:separate;border-spacing:3px;font-size:12px;width:100%}
+.matriz th{font:600 11px 'JetBrains Mono',monospace;color:var(--muted);text-align:center;padding:2px}
+.matriz th.m{text-align:left}
+.matriz td.m{font:700 12px 'JetBrains Mono',monospace;white-space:nowrap;padding-right:6px;cursor:pointer}
+.matriz td.m span{font:500 11px Inter,system-ui,sans-serif;color:var(--muted);margin-left:4px}
+.matriz td.c{height:22px;border-radius:4px;background:#F1DCDC;text-align:center;color:#fff;font-weight:700}
+.matriz td.c.ok{background:var(--verde)}
+.matriz td.c.fut{background:#EEF1EF}
+.matriz tr.total td{font:700 12px 'JetBrains Mono',monospace;text-align:center;color:var(--txt);padding-top:6px}
+.graf-rota{background:var(--graf-bg);border-radius:10px;padding:10px;height:230px;margin-bottom:14px}
+.tab-simples{width:100%;border-collapse:collapse;font-size:13px}
+.tab-simples th{text-align:left;color:var(--muted);font-weight:600;border-bottom:2px solid var(--borda);padding:6px}
+.tab-simples td{padding:6px;border-bottom:1px solid var(--borda)}
+.tab-simples td.num{font-family:'JetBrains Mono',monospace;text-align:right}
+.chip-tag{display:inline-block;font:700 12px 'JetBrains Mono',monospace;background:#F1DCDC;color:#8A1F1F;border-radius:5px;padding:2px 7px;margin:2px}
+
+/* Modal: flag na tabela */
+.fl{font:700 10px Inter,system-ui,sans-serif;color:#fff;background:#9B51E0;border-radius:4px;padding:1px 5px;margin-left:6px}
+.fl.baixa{background:var(--cinza)}
+tr.suspeita td{background:#FAF3FD}
+
+@media (max-width:1100px){.duas{grid-template-columns:1fr}.mini-kpis{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.abas{padding:0 8px}.aba{padding:12px 10px 9px;font-size:13px}.proto-tag{display:none}
+  .al{grid-template-columns:60px 1fr}.al .val{grid-column:1/-1;text-align:left}.al .t{font-size:18px}}
+
+.t-sus .sel{background:#9B51E0} .t-sus .v{color:#D7A8F5}
 </style>
 </head>
 <body>
@@ -146,8 +244,16 @@ main{padding:18px 24px 30px;max-width:1800px;margin:0 auto}
   <div class="trilho"><div class="faixa" id="tickerFaixa"></div></div>
 </div>
 
+<nav class="abas">
+  <button class="aba on" data-aba="painel">📊 Painel</button>
+  <button class="aba" data-aba="calendario">📅 Calendário de PM</button>
+  <button class="aba" data-aba="qualidade">🔍 Qualidade das leituras <span class="cont" id="contSusp">0</span></button>
+  <button class="aba" data-aba="rota">🚶 Rota de coleta</button>
+</nav>
+
 <main>
   <div class="erro" id="erro"></div>
+<div class="painel-aba on" id="aba-painel">
 
   <section class="kpis" id="kpis"></section>
 
@@ -164,6 +270,51 @@ main{padding:18px 24px 30px;max-width:1800px;margin:0 auto}
       <div class="graf-wrap" id="grafWrap"><canvas id="grafConsumo"></canvas></div>
     </aside>
   </div>
+</div>
+
+<div class="painel-aba" id="aba-calendario">
+  <div class="sec-tit"><h2>Calendário de preventivas — próximas 8 semanas</h2>
+    <p>Data prevista = horas restantes ÷ média real de uso de cada máquina</p></div>
+  <div class="mini-kpis" id="calResumo"></div>
+  <div class="cal" id="calendario"></div>
+  <div class="legenda">
+    <span><i style="background:#2E6FD9"></i>Hitachi</span><span><i style="background:#9B51E0"></i>Videojet</span>
+    <span><i style="background:#E08A1E"></i>Codeline</span><span><i style="background:#D93A3A"></i>Vencida</span>
+    <span>⚠ leitura atual suspeita — conferir antes de programar</span>
+  </div>
+  <div class="regras" id="calSemPrev"></div>
+</div>
+
+<div class="painel-aba" id="aba-qualidade">
+  <div class="sec-tit"><h2>Qualidade das leituras</h2>
+    <p>Leituras do board de coletas que não fazem sentido físico — conferir e corrigir no Monday</p></div>
+  <div class="mini-kpis" id="qualResumo"></div>
+  <div class="alertas" id="alertas"></div>
+  <div class="regras">
+    <b>Como o painel detecta:</b><br>
+    <b>Salto impossível</b> — o horímetro andou mais que 24 h por dia desde a leitura anterior (ex.: +1.240 h em 1 dia).<br>
+    <b>Reinício precoce</b> — o contador voltou ao início com menos de 60% do ciclo usado: preventiva antecipada ou leitura lançada na máquina errada.<br>
+    <b>Total &lt; preventiva</b> — o horímetro total ficou menor que o de preventiva: os dois campos provavelmente foram trocados.<br>
+    <b>Leitura duplicada</b> — duas leituras da mesma máquina no mesmo dia com valores diferentes.<br>
+    <b>Sem variação</b> (aviso leve) — mesmo valor por 14 dias ou mais: máquina parada ou número repetido.<br>
+    Leituras marcadas como salto são ignoradas no cálculo da média de uso, para não distorcer a previsão.
+  </div>
+</div>
+
+<div class="painel-aba" id="aba-rota">
+  <div class="sec-tit"><h2>Acompanhamento da rota de coleta</h2>
+    <p>Quais máquinas foram lidas em cada semana — verde = pelo menos uma leitura</p></div>
+  <div class="mini-kpis" id="rotaResumo"></div>
+  <div class="duas">
+    <div class="bloco"><h3>Cobertura por máquina × semana</h3><div style="overflow-x:auto"><table class="matriz" id="matriz"></table></div></div>
+    <div>
+      <div class="bloco" style="margin-bottom:16px"><h3>% da frota lida por semana</h3><div class="graf-rota"><canvas id="grafRota"></canvas></div></div>
+      <div class="bloco" style="margin-bottom:16px"><h3>Faltam ler nesta semana</h3><div id="faltaram"></div></div>
+      <div class="bloco" style="margin-bottom:16px"><h3>Inspetores</h3><table class="tab-simples" id="inspetores"></table></div>
+      <div class="bloco"><h3>Nunca coletadas</h3><div id="nunca"></div></div>
+    </div>
+  </div>
+</div>
 </main>
 
 <div class="modal-bg" id="modalBg">
@@ -215,7 +366,7 @@ function render(){
   const at = new Date(DADOS.atualizado_em);
   $('#atualizado').innerHTML = 'Atualizado em<br><b class="mono">' +
     at.toLocaleDateString('pt-BR') + ' ' + at.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'}) + '</b>';
-  renderTicker(); renderKpis(); renderChips(); renderGrade(); renderGrafico();
+  renderTicker(); renderKpis(); renderChips(); renderGrade(); renderGrafico(); renderAbas();
 }
 
 function renderTicker(){
@@ -225,6 +376,8 @@ function renderTicker(){
     itens.push(['t-atr', m.id, `<span class="sel">VENCIDA</span>${nome(m)} <span class="v">${m.restantes<0 ? '▲ +'+fmt(Math.abs(m.restantes))+' h além do limite' : 'atingiu o limite'}</span>`]));
   M.filter(m=>m.status==='PENDENTE').sort((a,b)=>a.restantes-b.restantes).forEach(m =>
     itens.push(['t-pen', m.id, `<span class="sel">PENDENTE</span>${nome(m)} <span class="v">faltam ${fmt(m.restantes)} h</span>`]));
+  M.filter(m=>m.leitura_suspeita).forEach(m =>
+    itens.push(['t-sus', m.id, `<span class="sel">LEITURA SUSPEITA</span>${nome(m)} <span class="v">conferir coleta de ${fDataCurta(m.ultima_coleta)}</span>`]));
   M.filter(m=>m.status==='SEM_LEITURA').forEach(m =>
     itens.push(['t-sem', m.id, `<span class="sel">SEM LEITURA</span>${nome(m)} <span class="v">registrar horímetro</span>`]));
   M.filter(m=>m.coleta_vencida && m.status!=='SEM_LEITURA').sort((a,b)=>(b.dias_sem_coleta??999)-(a.dias_sem_coleta??999)).forEach(m =>
@@ -306,6 +459,7 @@ function renderGrade(){
       <div class="restam"><span class="n">${restTxt}</span><span class="u">${unid}</span></div>
       <div class="prog"><i style="width:${pct}%"></i></div>
       <div class="rodape"><span>${prev}</span>${col}</div>
+      ${m.leitura_suspeita ? '<span class="susp" title="A última leitura não bate com a anterior — confira no Monday">⚠ Leitura suspeita</span>' : ''}
     </div>`;
   }).join('');
   document.querySelectorAll('.maq').forEach(c => c.onclick = () => abrirModal(c.dataset.id));
@@ -349,6 +503,148 @@ function renderGrafico(){
   });
 }
 
+/* ================= Abas: calendário, qualidade, rota ================= */
+const FLAG = {
+  SALTO:['Salto impossível','alta'], RESET_PRECOCE:['Reinício precoce','alta'],
+  TOTAL_MENOR:['Total < preventiva','alta'], DUPLICADA:['Leitura duplicada','alta'],
+  SEM_VARIACAO:['Sem variação','baixa'],
+};
+let abaAtual = 'painel', grafR = null;
+const hojeISO = () => (DADOS.atualizado_em || new Date().toISOString()).slice(0,10);
+const addDias = (iso, n) => { const d = new Date(iso+'T12:00:00'); d.setDate(d.getDate()+n); return d.toISOString().slice(0,10); };
+const segunda = iso => { const d = new Date(iso+'T12:00:00'); const w = (d.getDay()+6)%7; d.setDate(d.getDate()-w); return d.toISOString().slice(0,10); };
+const semanaISO = iso => { const d = new Date(iso+'T12:00:00'); d.setDate(d.getDate()+3-((d.getDay()+6)%7));
+  const j = new Date(d.getFullYear(),0,4); return 1+Math.round(((d-j)/864e5-3+((j.getDay()+6)%7))/7); };
+
+function renderAbas(){
+  const n = DADOS.resumo.leituras_suspeitas ?? 0;
+  $('#contSusp').textContent = n; $('#contSusp').classList.toggle('zero', !n);
+  document.querySelectorAll('.aba').forEach(b => b.classList.toggle('on', b.dataset.aba === abaAtual));
+  document.querySelectorAll('.painel-aba').forEach(p => p.classList.toggle('on', p.id === 'aba-' + abaAtual));
+  if(abaAtual === 'calendario') renderCalendario();
+  if(abaAtual === 'qualidade') renderQualidade();
+  if(abaAtual === 'rota') renderRota();
+}
+document.querySelectorAll('.aba').forEach(b => b.onclick = () => { abaAtual = b.dataset.aba; renderAbas(); });
+
+/* ---------- 1. Calendário de preventivas ---------- */
+function renderCalendario(){
+  const hoje = hojeISO(), ini = segunda(hoje), N = 8;
+  const cols = [{id:'venc', tit:'Vencidas', per:'agendar já', cls:'venc', itens:[]}];
+  for(let i=0;i<N;i++){
+    const a = addDias(ini, i*7), b = addDias(a, 6);
+    cols.push({id:'s'+i, a, b, tit:`Semana ${semanaISO(a)}${i===0?' · atual':''}`, per:`${fDataCurta(a)} – ${fDataCurta(b)}`,
+      cls: i===0 ? 'hoje perto' : (i===1 ? 'perto' : ''), itens:[]});
+  }
+  const fimCal = addDias(ini, N*7-1);
+  cols.push({id:'dep', tit:'Depois', per:`após ${fDataCurta(fimCal)}`, cls:'depois', itens:[]});
+  const semPrev = [];
+
+  DADOS.maquinas.forEach(m => {
+    if(m.status === 'ATRASADO'){ cols[0].itens.push(m); return; }
+    if(!m.previsao){ if(m.status !== 'SEM_LEITURA') semPrev.push(m); return; }
+    if(m.previsao > fimCal){ cols[cols.length-1].itens.push(m); return; }
+    const c = cols.find(c => c.a && m.previsao >= c.a && m.previsao <= c.b) || cols[1];
+    c.itens.push(m);
+  });
+  const nProx = cols.slice(1,5).reduce((s,c)=>s+c.itens.length,0);
+  $('#calResumo').innerHTML = [
+    ['r','Vencidas', cols[0].itens.length, 'precisam de PM agora'],
+    ['a','Próximas 4 semanas', nProx, 'PMs previstas'],
+    ['', 'Próximas 8 semanas', cols.slice(1,N+1).reduce((s,c)=>s+c.itens.length,0), 'PMs previstas'],
+    ['g','Sem previsão', semPrev.length + DADOS.resumo.sem_leitura, 'histórico insuficiente ou sem leitura'],
+  ].map(([c,r,v,s]) => `<div class="mini ${c}"><div class="rot">${r}</div><div class="val">${v}</div><div class="sub">${s}</div></div>`).join('');
+
+  const cartao = m => {
+    const venc = m.status === 'ATRASADO';
+    const quando = venc ? `${fmt(Math.abs(m.restantes))} h além` : (m.previsao > fimCal ? fDataCurta(m.previsao) : `${fDataCurta(m.previsao)} · ${fmt(m.restantes)} h`);
+    return `<div class="pm ${m.familia} ${venc?'venc':''}" data-id="${m.id}">
+      <b>${esc(m.tag)}</b> ${m.leitura_suspeita?'<span class="sp" title="Leitura atual suspeita">⚠</span>':''}
+      <div class="l">${esc(m.local)}</div><div class="d">${quando}</div></div>`;
+  };
+  const el = $('#calendario');
+  el.style.setProperty('--cols', cols.length);
+  el.innerHTML = cols.map(c => {
+    c.itens.sort((x,y) => (x.previsao||'').localeCompare(y.previsao||'') || x.restantes-y.restantes);
+    return `<div class="col ${c.cls}"><div class="cab-col"><span class="qtd">${c.itens.length}</span>
+      <div class="sem">${c.tit}</div><div class="per">${c.per}</div></div>
+      <div class="lista">${c.itens.length ? c.itens.map(cartao).join('') : '<div class="vazio-col">nenhuma PM</div>'}</div></div>`;
+  }).join('');
+  $('#calSemPrev').innerHTML = semPrev.length
+    ? `<b>Sem previsão</b> (menos de 7 dias de histórico confiável): ` + semPrev.map(m => `<span class="chip-tag" style="background:#EEF1EF;color:var(--txt);cursor:pointer" data-id="${m.id}">${m.tag}</span>`).join('')
+    : '';
+  document.querySelectorAll('#aba-calendario [data-id]').forEach(e => e.onclick = () => abrirModal(e.dataset.id));
+}
+
+/* ---------- 2. Qualidade das leituras ---------- */
+function renderQualidade(){
+  const A = DADOS.alertas_dados || [];
+  const altas = A.filter(a => a.gravidade === 'alta');
+  const maqs = new Set(altas.map(a => a.tag));
+  const atuais = DADOS.maquinas.filter(m => m.leitura_suspeita).length;
+  $('#qualResumo').innerHTML = [
+    ['r','Leituras suspeitas', altas.length, `últimos ${DADOS.parametros.alerta_dados_dias ?? 60} dias`],
+    ['a','Máquinas afetadas', maqs.size, 'com pelo menos 1 problema'],
+    ['b','Valor atual suspeito', atuais, 'status do painel pode estar errado'],
+    ['g','Avisos leves', A.length - altas.length, 'sem variação por muitos dias'],
+  ].map(([c,r,v,s]) => `<div class="mini ${c}"><div class="rot">${r}</div><div class="val">${v}</div><div class="sub">${s}</div></div>`).join('');
+
+  const idPorTag = Object.fromEntries(DADOS.maquinas.map(m => [m.tag, m]));
+  $('#alertas').innerHTML = A.length ? A.map(a => {
+    const m = idPorTag[a.tag] || {};
+    return `<div class="al ${a.gravidade}" data-id="${m.id||''}">
+      <div><div class="t">${esc(a.tag)}</div><div class="dt">${fData(a.data)}</div></div>
+      <div><span class="cod">${(FLAG[a.codigo]||[a.codigo])[0].toUpperCase()}</span>
+        <div class="msg">${esc(a.msg)}</div>
+        <div class="dt">${esc(m.local||'')}${a.inspetor ? ' · inspetor: '+esc(a.inspetor) : ''}</div></div>
+      <div class="val">${a.anterior!=null ? `${fmt(a.anterior)} <span class="seta">→</span> ${fmt(a.valor)} h<small>${fDataCurta(a.data_anterior)} → ${fDataCurta(a.data)}</small>` : fmt(a.valor)+' h'}</div>
+    </div>`;}).join('')
+    : '<div class="vazio">✅ Nenhuma leitura suspeita no período.</div>';
+  document.querySelectorAll('#alertas .al').forEach(e => e.onclick = () => e.dataset.id && abrirModal(e.dataset.id));
+}
+
+/* ---------- 4. Rota de coleta ---------- */
+function renderRota(){
+  const R = DADOS.rota; if(!R) return;
+  const hoje = hojeISO(), W = R.semanas, atual = W[W.length-1];
+  const ult = R.datas[R.datas.length-1];
+  $('#rotaResumo').innerHTML = [
+    ['', 'Última coleta', ult ? fDataCurta(ult.data) : '—', ult ? `${ult.maquinas} máquinas · ${ult.inspetores.join(', ')}` : ''],
+    [atual.pct>=90?'':(atual.pct>=60?'a':'r'), 'Cobertura desta semana', atual.pct+'%', `${atual.lidas} de ${atual.total} lidas`],
+    ['b', 'Intervalo entre coletas', R.intervalo_medio_dias!=null ? String(R.intervalo_medio_dias).replace('.',',')+' d' : '—', 'média entre dias de coleta'],
+    ['r', 'Nunca coletadas', R.nunca_coletadas.length, 'sem nenhuma leitura no histórico'],
+  ].map(([c,r,v,s]) => `<div class="mini ${c}"><div class="rot">${r}</div><div class="val">${v}</div><div class="sub">${esc(s)}</div></div>`).join('');
+
+  // Matriz máquina × semana
+  const maqs = DADOS.maquinas.slice().sort((a,b) => a.tag.localeCompare(b.tag));
+  const cab = '<tr><th class="m">Máquina</th>' + W.map(w => `<th title="${fData(w.inicio)} a ${fData(w.fim)}">S${semanaISO(w.inicio)}</th>`).join('') + '</tr>';
+  const linhas = maqs.map(m => '<tr>' + `<td class="m" data-id="${m.id}">${m.tag}<span>${esc(m.local)}</span></td>` + W.map(w => {
+    const n = m.historico.filter(h => h[0] >= w.inicio && h[0] <= w.fim).length;
+    const fut = w.inicio > hoje;
+    return `<td class="c ${n?'ok':''} ${fut?'fut':''}" title="${m.tag} · semana ${fDataCurta(w.inicio)}: ${n?n+' leitura(s)':'sem leitura'}">${n?'✓':''}</td>`;
+  }).join('') + '</tr>').join('');
+  const tot = '<tr class="total"><td class="m">Cobertura</td>' + W.map(w => `<td>${w.pct}%</td>`).join('') + '</tr>';
+  $('#matriz').innerHTML = cab + linhas + tot;
+  document.querySelectorAll('#matriz td.m[data-id]').forEach(e => e.onclick = () => abrirModal(e.dataset.id));
+
+  // Gráfico de cobertura semanal
+  if(grafR) grafR.destroy();
+  grafR = new Chart($('#grafRota'), {
+    type:'bar',
+    data:{labels:W.map(w => `S${semanaISO(w.inicio)}`), datasets:[{data:W.map(w=>w.pct),
+      backgroundColor:W.map(w => w.pct>=90?'#1E9350':(w.pct>=60?'#E0A21E':'#D93A3A')), borderRadius:4}]},
+    options:{responsive:true, maintainAspectRatio:false, animation:false, layout:{padding:{top:18}},
+      scales:{y:{min:0,max:100,grid:{color:'#2A3A31'},ticks:{color:'#C9D6CE',callback:v=>v+'%'}}, x:{grid:{display:false},ticks:{color:'#E6EEE9',font:{family:'JetBrains Mono'}}}},
+      plugins:{legend:{display:false}, tooltip:{callbacks:{title:c=>{const w=W[c[0].dataIndex];return `${fData(w.inicio)} a ${fData(w.fim)}`},label:c=>` ${W[c.dataIndex].lidas} de ${W[c.dataIndex].total} máquinas`}},
+        datalabels:{anchor:'end',align:'top',color:'#fff',font:{family:'JetBrains Mono',weight:'bold',size:11},formatter:v=>v+'%'}}}
+  });
+
+  $('#inspetores').innerHTML = '<tr><th>Inspetor</th><th style="text-align:right">Leituras</th><th style="text-align:right">Dias de coleta</th><th style="text-align:right">Última</th></tr>' +
+    R.inspetores.map(i => `<tr><td>${esc(i.nome)}</td><td class="num">${i.leituras}</td><td class="num">${i.dias_coleta}</td><td class="num">${fDataCurta(i.ultima)}</td></tr>`).join('');
+  $('#nunca').innerHTML = R.nunca_coletadas.length ? R.nunca_coletadas.map(t => `<span class="chip-tag">${t}</span>`).join('') : '<span style="color:var(--muted)">Todas já tiveram leitura.</span>';
+  $('#faltaram').innerHTML = atual.faltaram.length ? atual.faltaram.map(t => `<span class="chip-tag">${t}</span>`).join('') : '<span style="color:var(--verde);font-weight:700">Todas lidas ✔</span>';
+}
+
 function abrirModal(id){
   const m = DADOS.maquinas.find(x => x.id === id); if(!m) return;
   $('#mTitulo').innerHTML = `${esc(m.tag)} — ${esc(m.local)} <span class="selo" style="background:${COR[m.status]};font-size:13px;vertical-align:middle">${ROT[m.status]}</span>`;
@@ -362,16 +658,18 @@ function abrirModal(id){
     ['Última PM detectada', fData(m.ultima_preventiva)],
     ['Consumo do ciclo', m.pct_consumido==null?'—':m.pct_consumido.toLocaleString('pt-BR')+'%'],
     ['Leituras no histórico', m.historico.length],
+    ...(m.leitura_suspeita ? [['⚠ Atenção', 'Leitura atual suspeita']] : []),
   ];
   $('#mInfo').innerHTML = info.map(([k,v]) => `<div><span>${k}</span><b>${v}</b></div>`).join('');
   $('#mObs').innerHTML = m.obs_recente ? `<div class="obs">📝 <b>Última observação do inspetor:</b> ${esc(m.obs_recente)}</div>` : '';
 
   const h = m.historico;
   $('#mTabela').innerHTML = h.length
-    ? '<tr><th>Data</th><th style="text-align:right">Horímetro preventiva (h)</th><th style="text-align:right">Variação</th></tr>' +
+    ? '<tr><th>Data</th><th>Inspetor</th><th style="text-align:right">Horímetro preventiva (h)</th><th style="text-align:right">Variação</th><th style="text-align:right">Horímetro total (h)</th></tr>' +
       h.slice().reverse().map((r,i,arr) => {
         const ant = arr[i+1]; const d = ant ? r[1]-ant[1] : null;
-        return `<tr><td>${fData(r[0])}</td><td class="num">${fmt(r[1])}</td><td class="num">${d==null?'—':(d>0?'+':'')+fmt(d)}</td></tr>`;
+        const f = r[4] && FLAG[r[4]] ? `<span class="fl ${FLAG[r[4]][1]}">${FLAG[r[4]][0]}</span>` : '';
+        return `<tr class="${r[4] && r[4]!=='SEM_VARIACAO'?'suspeita':''}"><td>${fData(r[0])}${f}</td><td>${esc(r[3]||'—')}</td><td class="num">${fmt(r[1])}</td><td class="num">${d==null?'—':(d>0?'+':'')+fmt(d)}</td><td class="num">${fmt(r[2])}</td></tr>`;
       }).join('')
     : '<tr><td style="color:var(--muted)">Nenhuma leitura registrada no board de coletas para esta TAG.</td></tr>';
 
@@ -380,7 +678,7 @@ function abrirModal(id){
   grafH = new Chart($('#grafHist'), {
     type:'line',
     data:{labels:h.map(r=>fDataCurta(r[0])), datasets:[
-      {label:'Horímetro', data:h.map(r=>r[1]), borderColor:'#4CD483', backgroundColor:'#4CD48333', fill:true, tension:.25, pointRadius:4, pointBackgroundColor:'#4CD483'},
+      {label:'Horímetro', data:h.map(r=>r[1]), borderColor:'#4CD483', backgroundColor:'#4CD48333', fill:true, tension:.25, pointRadius:h.map(r=>r[4]&&r[4]!=='SEM_VARIACAO'?7:4), pointBackgroundColor:h.map(r=>r[4]&&r[4]!=='SEM_VARIACAO'?'#C77DFF':'#4CD483')},
       {label:m.tipo==='Regressivo'?'Zero (PM)':'Limite PM', data:h.map(()=>limite), borderColor:'#FF6B6B', borderDash:[6,4], pointRadius:0, datalabels:{display:false}}
     ]},
     options:{responsive:true, maintainAspectRatio:false, animation:false,
