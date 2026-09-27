@@ -100,6 +100,28 @@ main{padding:18px 24px 30px;max-width:1800px;margin:0 auto}
 .tabela td{padding:6px;border-bottom:1px solid var(--borda)}
 .tabela td.num{font-family:'JetBrains Mono',monospace;text-align:right}
 
+/* Letreiro estilo bolsa de valores */
+.ticker{display:flex;align-items:stretch;background:#0B0F0D;border-bottom:3px solid var(--vermelho);height:46px;overflow:hidden;position:relative}
+.ticker .rotulo{flex:0 0 auto;display:flex;align-items:center;gap:8px;background:var(--vermelho);color:#fff;font:800 15px Inter,system-ui,sans-serif;letter-spacing:1.5px;padding:0 18px;z-index:2;box-shadow:6px 0 12px rgba(0,0,0,.5)}
+.ticker .rotulo .pisca{width:10px;height:10px;border-radius:50%;background:#fff;animation:pisca 1s steps(2,start) infinite}
+.ticker.ok{border-color:var(--verde)} .ticker.ok .rotulo{background:var(--verde)}
+.ticker .trilho{flex:1;overflow:hidden;display:flex;align-items:center;mask-image:linear-gradient(90deg,transparent,#000 40px,#000 calc(100% - 40px),transparent)}
+.ticker .faixa{display:flex;white-space:nowrap;animation:rolar var(--dur,60s) linear infinite;will-change:transform}
+.ticker:hover .faixa{animation-play-state:paused}
+.ticker .item{display:inline-flex;align-items:center;gap:8px;padding:0 22px;font:600 16px 'JetBrains Mono',monospace;color:#E6EEE9;cursor:pointer}
+.ticker .item::after{content:'◆';color:#3A4A41;margin-left:22px;font-size:10px}
+.ticker .item b{font-weight:700;color:#fff}
+.ticker .sel{font:800 12px Inter,system-ui,sans-serif;letter-spacing:.8px;border-radius:4px;padding:3px 7px;color:#fff}
+.t-atr .sel{background:var(--vermelho);animation:pisca 1.2s steps(2,start) infinite}
+.t-atr .v{color:#FF5C5C;font-weight:700}
+.t-pen .sel{background:var(--amarelo);color:#1B1B1B} .t-pen .v{color:#FFC94D}
+.t-sem .sel{background:#6B7872} .t-sem .v{color:#B9C4BE}
+.t-col .sel{background:var(--azul)} .t-col .v{color:#7FB0FF}
+.t-prox .sel{background:var(--verde)} .t-prox .v{color:#4CD483}
+@keyframes rolar{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes pisca{to{visibility:hidden}}
+@media (max-width:560px){.ticker{height:40px}.ticker .rotulo{font-size:12px;padding:0 10px}.ticker .item{font-size:14px;padding:0 14px}}
+
 @media (max-width:1300px){.layout{grid-template-columns:1fr}.painel-graf{position:static}}
 @media (max-width:900px){.kpis{grid-template-columns:repeat(3,1fr)}.info{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){
@@ -118,6 +140,11 @@ main{padding:18px 24px 30px;max-width:1800px;margin:0 auto}
     <button class="btn" id="btnTela" title="Tela cheia">⛶ TV</button>
   </div>
 </header>
+
+<div class="ticker" id="ticker" aria-label="Alertas das codificadoras">
+  <div class="rotulo"><span class="pisca"></span><span id="tickerRot">ALERTAS</span></div>
+  <div class="trilho"><div class="faixa" id="tickerFaixa"></div></div>
+</div>
 
 <main>
   <div class="erro" id="erro"></div>
@@ -188,7 +215,34 @@ function render(){
   const at = new Date(DADOS.atualizado_em);
   $('#atualizado').innerHTML = 'Atualizado em<br><b class="mono">' +
     at.toLocaleDateString('pt-BR') + ' ' + at.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'}) + '</b>';
-  renderKpis(); renderChips(); renderGrade(); renderGrafico();
+  renderTicker(); renderKpis(); renderChips(); renderGrade(); renderGrafico();
+}
+
+function renderTicker(){
+  const M = DADOS.maquinas, itens = [];
+  const nome = m => `<b>${esc(m.tag)}</b> ${esc(m.local)}`;
+  M.filter(m=>m.status==='ATRASADO').sort((a,b)=>a.restantes-b.restantes).forEach(m =>
+    itens.push(['t-atr', m.id, `<span class="sel">VENCIDA</span>${nome(m)} <span class="v">${m.restantes<0 ? '▲ +'+fmt(Math.abs(m.restantes))+' h além do limite' : 'atingiu o limite'}</span>`]));
+  M.filter(m=>m.status==='PENDENTE').sort((a,b)=>a.restantes-b.restantes).forEach(m =>
+    itens.push(['t-pen', m.id, `<span class="sel">PENDENTE</span>${nome(m)} <span class="v">faltam ${fmt(m.restantes)} h</span>`]));
+  M.filter(m=>m.status==='SEM_LEITURA').forEach(m =>
+    itens.push(['t-sem', m.id, `<span class="sel">SEM LEITURA</span>${nome(m)} <span class="v">registrar horímetro</span>`]));
+  M.filter(m=>m.coleta_vencida && m.status!=='SEM_LEITURA').sort((a,b)=>(b.dias_sem_coleta??999)-(a.dias_sem_coleta??999)).forEach(m =>
+    itens.push(['t-col', m.id, `<span class="sel">COLETA</span>${nome(m)} <span class="v">${m.dias_sem_coleta==null?'nunca coletada':m.dias_sem_coleta+' d sem leitura'}</span>`]));
+  M.filter(m=>m.status==='EM_DIA' && m.previsao).sort((a,b)=>a.previsao.localeCompare(b.previsao)).slice(0,5).forEach(m =>
+    itens.push(['t-prox', m.id, `<span class="sel">PRÓXIMA PM</span>${nome(m)} <span class="v">${fDataCurta(m.previsao)} · ${fmt(m.restantes)} h</span>`]));
+
+  const r = DADOS.resumo, tk = $('#ticker');
+  tk.classList.toggle('ok', r.atrasado === 0);
+  $('#tickerRot').textContent = r.atrasado ? `${r.atrasado} VENCIDA${r.atrasado>1?'S':''}` : 'TUDO EM DIA';
+  if(!itens.length) itens.push(['t-prox', '', '<span class="v">Nenhum alerta no momento</span>']);
+
+  const bloco = itens.map(([c,id,h]) => `<span class="item ${c}" data-id="${id}">${h}</span>`).join('');
+  const faixa = $('#tickerFaixa');
+  faixa.innerHTML = bloco + bloco;              // duplicado para o loop contínuo
+  const px = faixa.scrollWidth / 2;
+  faixa.style.setProperty('--dur', Math.max(20, px / 90) + 's');   // ~90 px por segundo
+  faixa.querySelectorAll('.item[data-id]').forEach(el => el.onclick = () => el.dataset.id && abrirModal(el.dataset.id));
 }
 
 function renderKpis(){
