@@ -265,8 +265,8 @@ tr.suspeita td{background:#FAF3FD}
   <div class="layout">
     <section class="grade" id="grade"></section>
     <aside class="painel-graf">
-      <h2>Consumo do ciclo de preventiva</h2>
-      <p>% do intervalo de PM já utilizado — linha tracejada = 100%</p>
+      <h2>Próximas preventivas</h2>
+      <p>Da mais próxima para a mais distante · barra = % do ciclo de PM já usado · linha tracejada = 100%</p>
       <div class="graf-wrap" id="grafWrap"><canvas id="grafConsumo"></canvas></div>
     </aside>
   </div>
@@ -466,8 +466,13 @@ function renderGrade(){
 }
 
 function renderGrafico(){
+  // Ordem de urgência: vencidas primeiro, depois a PM mais próxima (data prevista),
+  // e por último as que não têm previsão (ordenadas pelas horas restantes).
+  const urg = m => m.status === 'ATRASADO' ? [0, m.restantes] :
+                   (m.dias_previstos != null ? [1, m.dias_previstos] : [2, m.restantes]);
   const lista = filtradas().filter(m => m.pct_consumido != null)
-    .sort((a,b) => b.pct_consumido - a.pct_consumido);
+    .sort((a,b) => { const x = urg(a), y = urg(b); return x[0]-y[0] || x[1]-y[1]; });
+  const rotulo = m => m.status === 'ATRASADO' ? 'VENCIDA' : (m.previsao ? 'PM ' + fDataCurta(m.previsao) : 'sem previsão');
   $('#grafWrap').style.height = Math.max(160, lista.length * 26 + 40) + 'px';
   const dados = {
     labels: lista.map(m => `${m.tag} · ${m.local}`),
@@ -487,16 +492,16 @@ function renderGrafico(){
     type:'bar', data:dados, plugins:[linha100],
     options:{
       indexAxis:'y', responsive:true, maintainAspectRatio:false, animation:false,
-      layout:{padding:{right:44}},
+      layout:{padding:{right:118}},
       scales:{
         x:{min:0, suggestedMax:110, grid:{color:'#2A3A31'}, ticks:{color:'#C9D6CE', callback:v=>v+'%'}},
         y:{grid:{display:false}, ticks:{color:'#E6EEE9', font:{family:'JetBrains Mono', size:11}}}
       },
       plugins:{
         legend:{display:false},
-        tooltip:{callbacks:{label:c=>{const m=lista[c.dataIndex];return ` ${c.raw}% · ${fmt(m.restantes)} h restantes`;}}},
+        tooltip:{callbacks:{label:c=>{const m=lista[c.dataIndex];return ` ${c.raw}% do ciclo · ${fmt(m.restantes)} h restantes · ${rotulo(m)}`;}}},
         datalabels:{anchor:'end', align:'right', color:'#fff', font:{family:'JetBrains Mono', weight:'bold', size:11},
-          formatter:v=>Math.round(v)+'%', clip:false}
+          formatter:(v,ctx)=>Math.round(v)+'% · '+rotulo(lista[ctx.dataIndex]), clip:false}
       },
       onClick:(e,els)=>{ if(els.length) abrirModal(lista[els[0].index].id); }
     }
