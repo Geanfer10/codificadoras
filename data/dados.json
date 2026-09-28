@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-09-28T14:14-03:00",
+ "atualizado_em": "2026-09-28T19:35-03:00",
  "parametros": {
   "limite_pendente_h": 200,
   "coleta_vencida_dias": 14,
@@ -18,7 +18,7 @@
   "sem_leitura": 4,
   "total": 25,
   "coleta_vencida": 7,
-  "leituras_suspeitas": 18
+  "leituras_suspeitas": 19
  },
  "maquinas": [
   {
@@ -31,7 +31,7 @@
    "tipo": "Crescente",
    "freq": 2000,
    "horimetro": 3094,
-   "horimetro_fonte": "coleta",
+   "horimetro_fonte": "status",
    "horimetro_total": 2000,
    "restantes": -1094,
    "pct_consumido": 154.7,
@@ -45,7 +45,7 @@
    "coleta_vencida": false,
    "ultima_preventiva": "2026-09-25",
    "obs_recente": "Precisamos da preventiva com urgência",
-   "leitura_suspeita": true,
+   "leitura_suspeita": false,
    "historico": [
     [
      "2026-07-03",
@@ -129,7 +129,7 @@
    "tipo": "Crescente",
    "freq": 2000,
    "horimetro": 2208,
-   "horimetro_fonte": "coleta",
+   "horimetro_fonte": "status",
    "horimetro_total": 2000,
    "restantes": -208,
    "pct_consumido": 110.4,
@@ -143,7 +143,7 @@
    "coleta_vencida": false,
    "ultima_preventiva": "2026-09-24",
    "obs_recente": null,
-   "leitura_suspeita": true,
+   "leitura_suspeita": false,
    "historico": [
     [
      "2026-07-03",
@@ -325,7 +325,7 @@
    "tipo": "Crescente",
    "freq": 2000,
    "horimetro": 1831,
-   "horimetro_fonte": "coleta",
+   "horimetro_fonte": "status",
    "horimetro_total": 2000,
    "restantes": 169,
    "pct_consumido": 91.5,
@@ -416,7 +416,7 @@
    "tipo": "Regressivo",
    "freq": 6000,
    "horimetro": 340,
-   "horimetro_fonte": "coleta",
+   "horimetro_fonte": "status",
    "horimetro_total": 6000,
    "restantes": 340,
    "pct_consumido": 94.3,
@@ -507,7 +507,7 @@
    "tipo": "Crescente",
    "freq": 2000,
    "horimetro": 1603,
-   "horimetro_fonte": "coleta",
+   "horimetro_fonte": "status",
    "horimetro_total": 2000,
    "restantes": 397,
    "pct_consumido": 80.2,
@@ -521,7 +521,7 @@
    "coleta_vencida": false,
    "ultima_preventiva": "2026-09-25",
    "obs_recente": null,
-   "leitura_suspeita": true,
+   "leitura_suspeita": false,
    "historico": [
     [
      "2026-07-03",
@@ -829,7 +829,7 @@
    "tipo": "Regressivo",
    "freq": 6000,
    "horimetro": 1113,
-   "horimetro_fonte": "coleta",
+   "horimetro_fonte": "status",
    "horimetro_total": 6000,
    "restantes": 1113,
    "pct_consumido": 81.5,
@@ -1035,6 +1035,104 @@
    "historico": []
   },
   {
+   "id": "12432281638",
+   "tag": "M16",
+   "local": "MESPACK R2",
+   "equip": "VIDEOJET 01",
+   "familia": "Videojet",
+   "serie": "24003012C65ZH",
+   "tipo": "Crescente",
+   "freq": 4500,
+   "horimetro": 2215,
+   "horimetro_fonte": "status",
+   "horimetro_total": 5000,
+   "restantes": 2285,
+   "pct_consumido": 49.2,
+   "status": "EM_DIA",
+   "dias_24h": 95,
+   "taxa_h_dia": 13.1,
+   "dias_previstos": 174,
+   "previsao": "2027-03-21",
+   "ultima_coleta": "2026-09-28",
+   "dias_sem_coleta": 0,
+   "coleta_vencida": false,
+   "ultima_preventiva": null,
+   "obs_recente": null,
+   "leitura_suspeita": false,
+   "historico": [
+    [
+     "2026-07-03",
+     2,
+     5000,
+     "Gustavo",
+     null
+    ],
+    [
+     "2026-07-08",
+     36,
+     5000,
+     "Gustavo",
+     null
+    ],
+    [
+     "2026-07-15",
+     142,
+     5000,
+     "Gustavo",
+     null
+    ],
+    [
+     "2026-08-06",
+     312,
+     5000,
+     "Gustavo",
+     null
+    ],
+    [
+     "2026-08-19",
+     312,
+     5000,
+     "Gustavo",
+     null
+    ],
+    [
+     "2026-09-02",
+     552,
+     5000,
+     "Gustavo",
+     null
+    ],
+    [
+     "2026-09-09",
+     720,
+     5000,
+     "Gustavo",
+     null
+    ],
+    [
+     "2026-09-24",
+     1078,
+     5000,
+     "Gustavo",
+     null
+    ],
+    [
+     "2026-09-25",
+     1106,
+     17553,
+     "Ryan cesar",
+     null
+    ],
+    [
+     "2026-09-28",
+     2215,
+     0,
+     "Pedro",
+     "TOTAL_MENOR"
+    ]
+   ]
+  },
+  {
    "id": "12432249311",
    "tag": "M18",
    "local": "MESPACK R1",
@@ -1043,22 +1141,22 @@
    "serie": "24003015C65ZH",
    "tipo": "Crescente",
    "freq": 4500,
-   "horimetro": 2215,
-   "horimetro_fonte": "coleta",
+   "horimetro": 2149,
+   "horimetro_fonte": "status",
    "horimetro_total": 5000,
-   "restantes": 2285,
-   "pct_consumido": 49.2,
+   "restantes": 2351,
+   "pct_consumido": 47.8,
    "status": "EM_DIA",
-   "dias_24h": 95,
+   "dias_24h": 98,
    "taxa_h_dia": 22.9,
-   "dias_previstos": 100,
-   "previsao": "2027-01-06",
+   "dias_previstos": 103,
+   "previsao": "2027-01-09",
    "ultima_coleta": "2026-09-28",
    "dias_sem_coleta": 0,
    "coleta_vencida": false,
    "ultima_preventiva": null,
    "obs_recente": "Filtro de ar em atraso",
-   "leitura_suspeita": true,
+   "leitura_suspeita": false,
    "historico": [
     [
      "2026-07-03",
@@ -1142,7 +1240,7 @@
    "tipo": "Regressivo",
    "freq": 6000,
    "horimetro": 3322,
-   "horimetro_fonte": "coleta",
+   "horimetro_fonte": "status",
    "horimetro_total": 6000,
    "restantes": 3322,
    "pct_consumido": 44.6,
@@ -1231,104 +1329,6 @@
    ]
   },
   {
-   "id": "12432281638",
-   "tag": "M16",
-   "local": "MESPACK R2",
-   "equip": "VIDEOJET 01",
-   "familia": "Videojet",
-   "serie": "24003012C65ZH",
-   "tipo": "Crescente",
-   "freq": 4500,
-   "horimetro": 1172,
-   "horimetro_fonte": "coleta",
-   "horimetro_total": 5000,
-   "restantes": 3328,
-   "pct_consumido": 26.0,
-   "status": "EM_DIA",
-   "dias_24h": 139,
-   "taxa_h_dia": 13.4,
-   "dias_previstos": 247,
-   "previsao": "2027-06-02",
-   "ultima_coleta": "2026-09-28",
-   "dias_sem_coleta": 0,
-   "coleta_vencida": false,
-   "ultima_preventiva": null,
-   "obs_recente": null,
-   "leitura_suspeita": true,
-   "historico": [
-    [
-     "2026-07-03",
-     2,
-     5000,
-     "Gustavo",
-     null
-    ],
-    [
-     "2026-07-08",
-     36,
-     5000,
-     "Gustavo",
-     null
-    ],
-    [
-     "2026-07-15",
-     142,
-     5000,
-     "Gustavo",
-     null
-    ],
-    [
-     "2026-08-06",
-     312,
-     5000,
-     "Gustavo",
-     null
-    ],
-    [
-     "2026-08-19",
-     312,
-     5000,
-     "Gustavo",
-     null
-    ],
-    [
-     "2026-09-02",
-     552,
-     5000,
-     "Gustavo",
-     null
-    ],
-    [
-     "2026-09-09",
-     720,
-     5000,
-     "Gustavo",
-     null
-    ],
-    [
-     "2026-09-24",
-     1078,
-     5000,
-     "Gustavo",
-     null
-    ],
-    [
-     "2026-09-25",
-     1106,
-     17553,
-     "Ryan cesar",
-     null
-    ],
-    [
-     "2026-09-28",
-     1172,
-     0,
-     "Pedro",
-     "TOTAL_MENOR"
-    ]
-   ]
-  },
-  {
    "id": "12432249164",
    "tag": "M24",
    "local": "MESPACK E",
@@ -1338,7 +1338,7 @@
    "tipo": "Regressivo",
    "freq": 6000,
    "horimetro": 3363,
-   "horimetro_fonte": "coleta",
+   "horimetro_fonte": "status",
    "horimetro_total": 6000,
    "restantes": 3363,
    "pct_consumido": 44.0,
@@ -1436,7 +1436,7 @@
    "tipo": "Regressivo",
    "freq": 6000,
    "horimetro": 3401,
-   "horimetro_fonte": "coleta",
+   "horimetro_fonte": "status",
    "horimetro_total": 6000,
    "restantes": 3401,
    "pct_consumido": 43.3,
@@ -1450,7 +1450,7 @@
    "coleta_vencida": false,
    "ultima_preventiva": "2026-09-28",
    "obs_recente": "6000",
-   "leitura_suspeita": true,
+   "leitura_suspeita": false,
    "historico": [
     [
      "2026-07-03",
@@ -1534,7 +1534,7 @@
    "tipo": "Regressivo",
    "freq": 6000,
    "horimetro": 3639,
-   "horimetro_fonte": "coleta",
+   "horimetro_fonte": "status",
    "horimetro_total": 6000,
    "restantes": 3639,
    "pct_consumido": 39.4,
@@ -1632,7 +1632,7 @@
    "tipo": "Crescente",
    "freq": 4500,
    "horimetro": 310,
-   "horimetro_fonte": "coleta",
+   "horimetro_fonte": "status",
    "horimetro_total": 5000,
    "restantes": 4190,
    "pct_consumido": 6.9,
@@ -1646,7 +1646,7 @@
    "coleta_vencida": false,
    "ultima_preventiva": "2026-09-02",
    "obs_recente": "Agendar preventiva",
-   "leitura_suspeita": true,
+   "leitura_suspeita": false,
    "historico": [
     [
      "2026-07-03",
@@ -1933,10 +1933,21 @@
   {
    "tag": "M16",
    "data": "2026-09-28",
+   "codigo": "SALTO",
+   "gravidade": "alta",
+   "msg": "Andou 1.109 h em 3 dia(s) — o máximo possível é ~72 h",
+   "valor": 2215,
+   "anterior": 1106,
+   "data_anterior": "2026-09-25",
+   "inspetor": "Pedro"
+  },
+  {
+   "tag": "M16",
+   "data": "2026-09-28",
    "codigo": "TOTAL_MENOR",
    "gravidade": "alta",
-   "msg": "Horímetro total (0 h) menor que o da preventiva (1.172 h) — campos trocados?",
-   "valor": 1172,
+   "msg": "Horímetro total (0 h) menor que o da preventiva (2.215 h) — campos trocados?",
+   "valor": 2215,
    "anterior": null,
    "data_anterior": null,
    "inspetor": "Pedro"
