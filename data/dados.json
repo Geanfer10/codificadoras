@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-20T11:00-03:00",
+ "atualizado_em": "2026-10-21T11:16-03:00",
  "parametros": {
   "limite_pendente_h": 200,
   "coleta_vencida_dias": 14,
@@ -9,39 +9,39 @@
  "fonte": {
   "board_status": 18420324650,
   "board_historico": 18420370319,
-  "leituras_historico": 198
+  "leituras_historico": 213
  },
  "resumo": {
   "atrasado": 3,
-  "pendente": 1,
-  "em_dia": 17,
+  "pendente": 2,
+  "em_dia": 16,
   "sem_leitura": 4,
   "total": 25,
-  "coleta_vencida": 10,
-  "leituras_suspeitas": 21
+  "coleta_vencida": 8,
+  "leituras_suspeitas": 23
  },
  "maquinas": [
   {
    "id": "12432218691",
    "tag": "M04",
-   "local": "MESPACK D",
+   "local": "OFICINA",
    "equip": "HITACHI PXR 04",
    "familia": "Hitachi",
    "serie": "19287101",
    "tipo": "Crescente",
    "freq": 2000,
-   "horimetro": 3358,
-   "horimetro_fonte": "coleta",
+   "horimetro": 3581,
+   "horimetro_fonte": "status",
    "horimetro_total": 2000,
-   "restantes": -1358,
-   "pct_consumido": 167.9,
+   "restantes": -1581,
+   "pct_consumido": 179.1,
    "status": "ATRASADO",
    "dias_24h": null,
-   "taxa_h_dia": 21.3,
+   "taxa_h_dia": 20.9,
    "dias_previstos": null,
    "previsao": null,
-   "ultima_coleta": "2026-10-09",
-   "dias_sem_coleta": 11,
+   "ultima_coleta": "2026-10-21",
+   "dias_sem_coleta": 0,
    "coleta_vencida": false,
    "ultima_preventiva": "2026-09-25",
    "obs_recente": "Agendar manutenção preventiva",
@@ -130,33 +130,40 @@
      2000,
      "Gustavo",
      null
+    ],
+    [
+     "2026-10-21",
+     3581,
+     2000,
+     "Gustavo",
+     null
     ]
    ]
   },
   {
    "id": "12432275611",
    "tag": "M09",
-   "local": "SELADORA ROTULADORA",
+   "local": "4KG",
    "equip": "HITACHI RX2-S- 09",
    "familia": "Hitachi",
    "serie": "2504712502",
    "tipo": "Crescente",
    "freq": 2000,
-   "horimetro": 2367,
-   "horimetro_fonte": "coleta",
+   "horimetro": 2655,
+   "horimetro_fonte": "status",
    "horimetro_total": 2000,
-   "restantes": -367,
-   "pct_consumido": 118.3,
+   "restantes": -655,
+   "pct_consumido": 132.8,
    "status": "ATRASADO",
    "dias_24h": null,
-   "taxa_h_dia": 13.4,
+   "taxa_h_dia": 14.8,
    "dias_previstos": null,
    "previsao": null,
-   "ultima_coleta": "2026-10-09",
-   "dias_sem_coleta": 11,
+   "ultima_coleta": "2026-10-21",
+   "dias_sem_coleta": 0,
    "coleta_vencida": false,
    "ultima_preventiva": "2026-09-25",
-   "obs_recente": "Agendar manutenção preventiva",
+   "obs_recente": "Agenda manutenção preventiva",
    "leitura_suspeita": false,
    "historico": [
     [
@@ -242,6 +249,13 @@
      2000,
      "Gustavo",
      null
+    ],
+    [
+     "2026-10-21",
+     2655,
+     2000,
+     "Gustavo",
+     null
     ]
    ]
   },
@@ -254,18 +268,18 @@
    "serie": "16896010",
    "tipo": "Crescente",
    "freq": 2000,
-   "horimetro": 2091,
-   "horimetro_fonte": "coleta",
+   "horimetro": 2324,
+   "horimetro_fonte": "status",
    "horimetro_total": 2000,
-   "restantes": -91,
-   "pct_consumido": 104.6,
+   "restantes": -324,
+   "pct_consumido": 116.2,
    "status": "ATRASADO",
    "dias_24h": null,
-   "taxa_h_dia": 22.4,
+   "taxa_h_dia": 22.1,
    "dias_previstos": null,
    "previsao": null,
-   "ultima_coleta": "2026-10-09",
-   "dias_sem_coleta": 11,
+   "ultima_coleta": "2026-10-21",
+   "dias_sem_coleta": 0,
    "coleta_vencida": false,
    "ultima_preventiva": "2026-07-08",
    "obs_recente": "Agendar manutenção preventiva",
@@ -340,6 +354,13 @@
      2000,
      "Gustavo",
      null
+    ],
+    [
+     "2026-10-21",
+     2324,
+     2000,
+     "Gustavo",
+     null
     ]
    ]
   },
@@ -353,7 +374,7 @@
    "tipo": "Regressivo",
    "freq": 6000,
    "horimetro": 102,
-   "horimetro_fonte": "coleta",
+   "horimetro_fonte": "status",
    "horimetro_total": 6000,
    "restantes": 102,
    "pct_consumido": 98.3,
@@ -361,9 +382,9 @@
    "dias_24h": 4,
    "taxa_h_dia": 15.6,
    "dias_previstos": 7,
-   "previsao": "2026-10-27",
-   "ultima_coleta": "2026-10-09",
-   "dias_sem_coleta": 11,
+   "previsao": "2026-10-28",
+   "ultima_coleta": "2026-10-21",
+   "dias_sem_coleta": 0,
    "coleta_vencida": false,
    "ultima_preventiva": "2026-09-24",
    "obs_recente": "Agendar manutenção preventiva",
@@ -451,27 +472,27 @@
   {
    "id": "12432266194",
    "tag": "M14",
-   "local": "4KG",
+   "local": "ENCAIXOTAMENTO ROTULADEIRA",
    "equip": "HITACHI PXR 14",
    "familia": "Hitachi",
    "serie": "19256012",
    "tipo": "Crescente",
    "freq": 2000,
-   "horimetro": 1712,
-   "horimetro_fonte": "coleta",
+   "horimetro": 1858,
+   "horimetro_fonte": "status",
    "horimetro_total": 2000,
-   "restantes": 288,
-   "pct_consumido": 85.6,
-   "status": "EM_DIA",
-   "dias_24h": 12,
-   "taxa_h_dia": 8.3,
-   "dias_previstos": 35,
-   "previsao": "2026-11-24",
-   "ultima_coleta": "2026-10-09",
-   "dias_sem_coleta": 11,
+   "restantes": 142,
+   "pct_consumido": 92.9,
+   "status": "PENDENTE",
+   "dias_24h": 6,
+   "taxa_h_dia": 9.0,
+   "dias_previstos": 16,
+   "previsao": "2026-11-06",
+   "ultima_coleta": "2026-10-21",
+   "dias_sem_coleta": 0,
    "coleta_vencida": false,
    "ultima_preventiva": "2026-09-25",
-   "obs_recente": null,
+   "obs_recente": "Agendar manutenção preventiva",
    "leitura_suspeita": false,
    "historico": [
     [
@@ -557,6 +578,13 @@
      2000,
      "Gustavo",
      null
+    ],
+    [
+     "2026-10-21",
+     1858,
+     2000,
+     "Gustavo",
+     null
     ]
    ]
   },
@@ -569,22 +597,22 @@
    "serie": "2541075",
    "tipo": "Regressivo",
    "freq": 6000,
-   "horimetro": 660,
-   "horimetro_fonte": "coleta",
+   "horimetro": 378,
+   "horimetro_fonte": "status",
    "horimetro_total": 6000,
-   "restantes": 660,
-   "pct_consumido": 89.0,
+   "restantes": 378,
+   "pct_consumido": 93.7,
    "status": "EM_DIA",
-   "dias_24h": 28,
-   "taxa_h_dia": 22.0,
-   "dias_previstos": 30,
-   "previsao": "2026-11-19",
-   "ultima_coleta": "2026-10-09",
-   "dias_sem_coleta": 11,
+   "dias_24h": 16,
+   "taxa_h_dia": 22.2,
+   "dias_previstos": 17,
+   "previsao": "2026-11-07",
+   "ultima_coleta": "2026-10-21",
+   "dias_sem_coleta": 0,
    "coleta_vencida": false,
    "ultima_preventiva": "2026-09-30",
-   "obs_recente": null,
-   "leitura_suspeita": true,
+   "obs_recente": "Agendar manutenção preventiva",
+   "leitura_suspeita": false,
    "historico": [
     [
      "2026-07-03",
@@ -669,54 +697,103 @@
      6000,
      "Gustavo",
      "SALTO"
+    ],
+    [
+     "2026-10-21",
+     378,
+     6000,
+     "Gustavo",
+     null
     ]
    ]
   },
   {
-   "id": "12432265835",
-   "tag": "M19",
-   "local": "4KG",
-   "equip": "CODELINE SS5632",
+   "id": "12432392876",
+   "tag": "M26",
+   "local": "SERAC",
+   "equip": "TINTA CODELINE",
    "familia": "Codeline",
-   "serie": "SS5632",
+   "serie": "2512006",
    "tipo": "Regressivo",
    "freq": 6000,
-   "horimetro": 747,
+   "horimetro": 481,
    "horimetro_fonte": "status",
    "horimetro_total": 6000,
-   "restantes": 747,
-   "pct_consumido": 87.5,
+   "restantes": 481,
+   "pct_consumido": 92.0,
    "status": "EM_DIA",
-   "dias_24h": 31,
-   "taxa_h_dia": null,
-   "dias_previstos": null,
-   "previsao": null,
-   "ultima_coleta": "2026-09-28",
-   "dias_sem_coleta": 22,
-   "coleta_vencida": true,
-   "ultima_preventiva": null,
+   "dias_24h": 20,
+   "taxa_h_dia": 11.5,
+   "dias_previstos": 42,
+   "previsao": "2026-12-02",
+   "ultima_coleta": "2026-10-21",
+   "dias_sem_coleta": 0,
+   "coleta_vencida": false,
+   "ultima_preventiva": "2026-09-30",
    "obs_recente": null,
    "leitura_suspeita": false,
    "historico": [
     [
-     "2026-08-19",
-     5909,
+     "2026-07-08",
+     1640,
      6000,
      "Gustavo",
      null
     ],
     [
-     "2026-09-25",
-     1125,
-     5075,
-     "Ryan César",
-     "SALTO"
+     "2026-07-15",
+     1640,
+     6000,
+     "Gustavo",
+     null
     ],
     [
-     "2026-09-28",
-     747,
-     0,
-     "Pedro",
+     "2026-08-06",
+     1518,
+     6000,
+     "Gustavo",
+     null
+    ],
+    [
+     "2026-09-02",
+     1209,
+     6000,
+     "Gustavo",
+     null
+    ],
+    [
+     "2026-09-09",
+     1062,
+     6000,
+     "Gustavo",
+     null
+    ],
+    [
+     "2026-09-24",
+     822,
+     5000,
+     "Gustavo",
+     null
+    ],
+    [
+     "2026-09-25",
+     813,
+     2592,
+     "Ryan cesar",
+     null
+    ],
+    [
+     "2026-09-30",
+     1395,
+     6000,
+     "Gustavo",
+     null
+    ],
+    [
+     "2026-10-21",
+     481,
+     6000,
+     "Gustavo",
      "SALTO"
     ]
    ]
@@ -724,24 +801,24 @@
   {
    "id": "12432254845",
    "tag": "M23",
-   "local": "OFICINA",
+   "local": "MESPACK D",
    "equip": "TINTA CODELINE",
    "familia": "Codeline",
    "serie": "242605",
    "tipo": "Regressivo",
    "freq": 6000,
-   "horimetro": 923,
-   "horimetro_fonte": "coleta",
+   "horimetro": 729,
+   "horimetro_fonte": "status",
    "horimetro_total": 6000,
-   "restantes": 923,
-   "pct_consumido": 84.6,
+   "restantes": 729,
+   "pct_consumido": 87.8,
    "status": "EM_DIA",
-   "dias_24h": 38,
-   "taxa_h_dia": 12.4,
-   "dias_previstos": 74,
-   "previsao": "2027-01-02",
-   "ultima_coleta": "2026-10-09",
-   "dias_sem_coleta": 11,
+   "dias_24h": 30,
+   "taxa_h_dia": 12.9,
+   "dias_previstos": 57,
+   "previsao": "2026-12-17",
+   "ultima_coleta": "2026-10-21",
+   "dias_sem_coleta": 0,
    "coleta_vencida": false,
    "ultima_preventiva": null,
    "obs_recente": null,
@@ -823,196 +900,64 @@
      6000,
      "Gustavo",
      null
+    ],
+    [
+     "2026-10-21",
+     729,
+     6000,
+     "Gustavo",
+     null
     ]
    ]
   },
   {
-   "id": "12432392876",
-   "tag": "M26",
-   "local": "SERAC",
-   "equip": "TINTA CODELINE",
+   "id": "12432265835",
+   "tag": "M19",
+   "local": "4KG",
+   "equip": "CODELINE SS5632",
    "familia": "Codeline",
-   "serie": "2512006",
+   "serie": "SS5632",
    "tipo": "Regressivo",
    "freq": 6000,
-   "horimetro": 1395,
+   "horimetro": 747,
    "horimetro_fonte": "status",
    "horimetro_total": 6000,
-   "restantes": 1395,
-   "pct_consumido": 76.8,
+   "restantes": 747,
+   "pct_consumido": 87.5,
    "status": "EM_DIA",
-   "dias_24h": 58,
-   "taxa_h_dia": 11.5,
-   "dias_previstos": 121,
-   "previsao": "2027-02-18",
-   "ultima_coleta": "2026-09-30",
-   "dias_sem_coleta": 20,
+   "dias_24h": 31,
+   "taxa_h_dia": null,
+   "dias_previstos": null,
+   "previsao": null,
+   "ultima_coleta": "2026-09-28",
+   "dias_sem_coleta": 23,
    "coleta_vencida": true,
-   "ultima_preventiva": "2026-09-30",
+   "ultima_preventiva": null,
    "obs_recente": null,
    "leitura_suspeita": false,
    "historico": [
     [
-     "2026-07-08",
-     1640,
+     "2026-08-19",
+     5909,
      6000,
-     "Gustavo",
-     null
-    ],
-    [
-     "2026-07-15",
-     1640,
-     6000,
-     "Gustavo",
-     null
-    ],
-    [
-     "2026-08-06",
-     1518,
-     6000,
-     "Gustavo",
-     null
-    ],
-    [
-     "2026-09-02",
-     1209,
-     6000,
-     "Gustavo",
-     null
-    ],
-    [
-     "2026-09-09",
-     1062,
-     6000,
-     "Gustavo",
-     null
-    ],
-    [
-     "2026-09-24",
-     822,
-     5000,
      "Gustavo",
      null
     ],
     [
      "2026-09-25",
-     813,
-     2592,
-     "Ryan cesar",
-     null
+     1125,
+     5075,
+     "Ryan César",
+     "SALTO"
     ],
     [
-     "2026-09-30",
-     1395,
-     6000,
-     "Gustavo",
-     null
+     "2026-09-28",
+     747,
+     0,
+     "Pedro",
+     "SALTO"
     ]
    ]
-  },
-  {
-   "id": "12432254435",
-   "tag": "M11",
-   "local": "OFICINA",
-   "equip": "HITACHI RX2 11",
-   "familia": "Hitachi",
-   "serie": "2520312709",
-   "tipo": "Crescente",
-   "freq": 2000,
-   "horimetro": 550,
-   "horimetro_fonte": "status",
-   "horimetro_total": 2000,
-   "restantes": 1450,
-   "pct_consumido": 27.5,
-   "status": "EM_DIA",
-   "dias_24h": 60,
-   "taxa_h_dia": 9.7,
-   "dias_previstos": 150,
-   "previsao": "2027-03-19",
-   "ultima_coleta": "2026-09-09",
-   "dias_sem_coleta": 41,
-   "coleta_vencida": true,
-   "ultima_preventiva": "2026-07-08",
-   "obs_recente": "Precisamos agendar uma preventiva",
-   "leitura_suspeita": false,
-   "historico": [
-    [
-     "2026-07-03",
-     2600,
-     51803,
-     "Gustavo",
-     null
-    ],
-    [
-     "2026-07-08",
-     9,
-     51821,
-     "Gustavo",
-     null
-    ],
-    [
-     "2026-07-15",
-     9,
-     51821,
-     "Gustavo",
-     null
-    ],
-    [
-     "2026-08-06",
-     311,
-     2000,
-     "Gustavo",
-     null
-    ],
-    [
-     "2026-08-19",
-     549,
-     2000,
-     "Gustavo",
-     null
-    ],
-    [
-     "2026-09-02",
-     550,
-     2000,
-     "Gustavo",
-     null
-    ],
-    [
-     "2026-09-09",
-     550,
-     2000,
-     "Gustavo",
-     null
-    ]
-   ]
-  },
-  {
-   "id": "12432117629",
-   "tag": "M01",
-   "local": "1,7KG",
-   "equip": "HITACHI PB 01",
-   "familia": "Hitachi",
-   "serie": "22179209",
-   "tipo": "Crescente",
-   "freq": 2000,
-   "horimetro": 521,
-   "horimetro_fonte": "status",
-   "horimetro_total": 2000,
-   "restantes": 1479,
-   "pct_consumido": 26.1,
-   "status": "EM_DIA",
-   "dias_24h": 62,
-   "taxa_h_dia": null,
-   "dias_previstos": null,
-   "previsao": null,
-   "ultima_coleta": "2026-09-25",
-   "dias_sem_coleta": 25,
-   "coleta_vencida": true,
-   "ultima_preventiva": null,
-   "obs_recente": null,
-   "leitura_suspeita": false,
-   "historico": []
   },
   {
    "id": "12432247776",
@@ -1023,18 +968,18 @@
    "serie": "15206006",
    "tipo": "Crescente",
    "freq": 2000,
-   "horimetro": 500,
-   "horimetro_fonte": "coleta",
+   "horimetro": 768,
+   "horimetro_fonte": "status",
    "horimetro_total": 2000,
-   "restantes": 1500,
-   "pct_consumido": 25.0,
+   "restantes": 1232,
+   "pct_consumido": 38.4,
    "status": "EM_DIA",
-   "dias_24h": 62,
-   "taxa_h_dia": 18.4,
-   "dias_previstos": 82,
-   "previsao": "2027-01-10",
-   "ultima_coleta": "2026-10-09",
-   "dias_sem_coleta": 11,
+   "dias_24h": 51,
+   "taxa_h_dia": 19.0,
+   "dias_previstos": 65,
+   "previsao": "2026-12-25",
+   "ultima_coleta": "2026-10-21",
+   "dias_sem_coleta": 0,
    "coleta_vencida": false,
    "ultima_preventiva": "2026-09-30",
    "obs_recente": null,
@@ -1123,30 +1068,64 @@
      2000,
      "Gustavo",
      null
+    ],
+    [
+     "2026-10-21",
+     768,
+     2000,
+     "Gustavo",
+     null
     ]
    ]
   },
   {
+   "id": "12432117629",
+   "tag": "M01",
+   "local": "1,7KG",
+   "equip": "HITACHI PB 01",
+   "familia": "Hitachi",
+   "serie": "22179209",
+   "tipo": "Crescente",
+   "freq": 2000,
+   "horimetro": 521,
+   "horimetro_fonte": "status",
+   "horimetro_total": 2000,
+   "restantes": 1479,
+   "pct_consumido": 26.1,
+   "status": "EM_DIA",
+   "dias_24h": 62,
+   "taxa_h_dia": null,
+   "dias_previstos": null,
+   "previsao": null,
+   "ultima_coleta": "2026-09-25",
+   "dias_sem_coleta": 26,
+   "coleta_vencida": true,
+   "ultima_preventiva": null,
+   "obs_recente": null,
+   "leitura_suspeita": false,
+   "historico": []
+  },
+  {
    "id": "12432249311",
    "tag": "M18",
-   "local": "MESPACK R1",
+   "local": "R1",
    "equip": "VIDEOJET 03",
    "familia": "Videojet",
    "serie": "24003015C65ZH",
    "tipo": "Crescente",
    "freq": 4500,
-   "horimetro": 2479,
-   "horimetro_fonte": "coleta",
+   "horimetro": 2767,
+   "horimetro_fonte": "status",
    "horimetro_total": 5000,
-   "restantes": 2021,
-   "pct_consumido": 55.1,
+   "restantes": 1733,
+   "pct_consumido": 61.5,
    "status": "EM_DIA",
-   "dias_24h": 84,
-   "taxa_h_dia": 23.2,
-   "dias_previstos": 87,
-   "previsao": "2027-01-15",
-   "ultima_coleta": "2026-10-09",
-   "dias_sem_coleta": 11,
+   "dias_24h": 72,
+   "taxa_h_dia": 23.3,
+   "dias_previstos": 74,
+   "previsao": "2027-01-03",
+   "ultima_coleta": "2026-10-21",
+   "dias_sem_coleta": 0,
    "coleta_vencida": false,
    "ultima_preventiva": null,
    "obs_recente": "Filtro de ar em atraso",
@@ -1235,6 +1214,97 @@
      6000,
      "Gustavo",
      null
+    ],
+    [
+     "2026-10-21",
+     2767,
+     5000,
+     "Gustavo",
+     null
+    ]
+   ]
+  },
+  {
+   "id": "12432254435",
+   "tag": "M11",
+   "local": "OFICINA",
+   "equip": "HITACHI RX2 11",
+   "familia": "Hitachi",
+   "serie": "2520312709",
+   "tipo": "Crescente",
+   "freq": 2000,
+   "horimetro": 22,
+   "horimetro_fonte": "coleta",
+   "horimetro_total": 2000,
+   "restantes": 1978,
+   "pct_consumido": 1.1,
+   "status": "EM_DIA",
+   "dias_24h": 82,
+   "taxa_h_dia": 9.7,
+   "dias_previstos": 205,
+   "previsao": "2027-05-14",
+   "ultima_coleta": "2026-10-21",
+   "dias_sem_coleta": 0,
+   "coleta_vencida": false,
+   "ultima_preventiva": "2026-10-21",
+   "obs_recente": "Precisamos agendar uma preventiva",
+   "leitura_suspeita": true,
+   "historico": [
+    [
+     "2026-07-03",
+     2600,
+     51803,
+     "Gustavo",
+     null
+    ],
+    [
+     "2026-07-08",
+     9,
+     51821,
+     "Gustavo",
+     null
+    ],
+    [
+     "2026-07-15",
+     9,
+     51821,
+     "Gustavo",
+     null
+    ],
+    [
+     "2026-08-06",
+     311,
+     2000,
+     "Gustavo",
+     null
+    ],
+    [
+     "2026-08-19",
+     549,
+     2000,
+     "Gustavo",
+     null
+    ],
+    [
+     "2026-09-02",
+     550,
+     2000,
+     "Gustavo",
+     null
+    ],
+    [
+     "2026-09-09",
+     550,
+     2000,
+     "Gustavo",
+     null
+    ],
+    [
+     "2026-10-21",
+     22,
+     2000,
+     "Gustavo",
+     "RESET_PRECOCE"
     ]
    ]
   },
@@ -1266,138 +1336,26 @@
    "historico": []
   },
   {
-   "id": "12432254868",
-   "tag": "M22",
-   "local": "MESPACK F",
-   "equip": "TINTA CODELINE",
-   "familia": "Codeline",
-   "serie": "2563027V",
-   "tipo": "Regressivo",
-   "freq": 6000,
-   "horimetro": 3060,
-   "horimetro_fonte": "coleta",
-   "horimetro_total": 6000,
-   "restantes": 3060,
-   "pct_consumido": 49.0,
-   "status": "EM_DIA",
-   "dias_24h": 128,
-   "taxa_h_dia": 23.0,
-   "dias_previstos": 133,
-   "previsao": "2027-03-02",
-   "ultima_coleta": "2026-10-09",
-   "dias_sem_coleta": 11,
-   "coleta_vencida": false,
-   "ultima_preventiva": null,
-   "obs_recente": null,
-   "leitura_suspeita": false,
-   "historico": [
-    [
-     "2026-07-03",
-     5280,
-     6000,
-     "Gustavo",
-     null
-    ],
-    [
-     "2026-07-08",
-     5181,
-     6000,
-     "Gustavo",
-     null
-    ],
-    [
-     "2026-07-15",
-     5036,
-     6000,
-     "Gustavo",
-     null
-    ],
-    [
-     "2026-08-06",
-     4535,
-     6000,
-     "Gustavo",
-     null
-    ],
-    [
-     "2026-08-19",
-     4242,
-     6000,
-     "Gustavo",
-     null
-    ],
-    [
-     "2026-09-02",
-     3921,
-     6000,
-     "Gustavo",
-     null
-    ],
-    [
-     "2026-09-09",
-     3772,
-     6000,
-     "Gustavo",
-     null
-    ],
-    [
-     "2026-09-24",
-     3415,
-     6000,
-     "Gustavo",
-     null
-    ],
-    [
-     "2026-09-25",
-     3388,
-     2812,
-     "Ryan cesar",
-     null
-    ],
-    [
-     "2026-09-28",
-     3322,
-     0,
-     "Pedro",
-     null
-    ],
-    [
-     "2026-09-30",
-     3275,
-     6000,
-     "Gustavo",
-     null
-    ],
-    [
-     "2026-10-09",
-     3060,
-     6000,
-     "Gustavo",
-     null
-    ]
-   ]
-  },
-  {
    "id": "12432281638",
    "tag": "M16",
-   "local": "MESPACK R2",
+   "local": "R2",
    "equip": "VIDEOJET 01",
    "familia": "Videojet",
    "serie": "24003012C65ZH",
    "tipo": "Crescente",
    "freq": 4500,
-   "horimetro": 1436,
-   "horimetro_fonte": "coleta",
+   "horimetro": 1724,
+   "horimetro_fonte": "status",
    "horimetro_total": 5000,
-   "restantes": 3064,
-   "pct_consumido": 31.9,
+   "restantes": 2776,
+   "pct_consumido": 38.3,
    "status": "EM_DIA",
-   "dias_24h": 128,
-   "taxa_h_dia": 14.6,
-   "dias_previstos": 210,
-   "previsao": "2027-05-18",
-   "ultima_coleta": "2026-10-09",
-   "dias_sem_coleta": 11,
+   "dias_24h": 116,
+   "taxa_h_dia": 15.8,
+   "dias_previstos": 176,
+   "previsao": "2027-04-15",
+   "ultima_coleta": "2026-10-21",
+   "dias_sem_coleta": 0,
    "coleta_vencida": false,
    "ultima_preventiva": "2026-09-30",
    "obs_recente": null,
@@ -1486,6 +1444,132 @@
      6000,
      "Gustavo",
      null
+    ],
+    [
+     "2026-10-21",
+     1724,
+     5000,
+     "Gustavo",
+     null
+    ]
+   ]
+  },
+  {
+   "id": "12432254868",
+   "tag": "M22",
+   "local": "MESPACK F",
+   "equip": "TINTA CODELINE",
+   "familia": "Codeline",
+   "serie": "2563027V",
+   "tipo": "Regressivo",
+   "freq": 6000,
+   "horimetro": 2782,
+   "horimetro_fonte": "status",
+   "horimetro_total": 6000,
+   "restantes": 2782,
+   "pct_consumido": 53.6,
+   "status": "EM_DIA",
+   "dias_24h": 116,
+   "taxa_h_dia": 23.0,
+   "dias_previstos": 121,
+   "previsao": "2027-02-19",
+   "ultima_coleta": "2026-10-21",
+   "dias_sem_coleta": 0,
+   "coleta_vencida": false,
+   "ultima_preventiva": null,
+   "obs_recente": null,
+   "leitura_suspeita": false,
+   "historico": [
+    [
+     "2026-07-03",
+     5280,
+     6000,
+     "Gustavo",
+     null
+    ],
+    [
+     "2026-07-08",
+     5181,
+     6000,
+     "Gustavo",
+     null
+    ],
+    [
+     "2026-07-15",
+     5036,
+     6000,
+     "Gustavo",
+     null
+    ],
+    [
+     "2026-08-06",
+     4535,
+     6000,
+     "Gustavo",
+     null
+    ],
+    [
+     "2026-08-19",
+     4242,
+     6000,
+     "Gustavo",
+     null
+    ],
+    [
+     "2026-09-02",
+     3921,
+     6000,
+     "Gustavo",
+     null
+    ],
+    [
+     "2026-09-09",
+     3772,
+     6000,
+     "Gustavo",
+     null
+    ],
+    [
+     "2026-09-24",
+     3415,
+     6000,
+     "Gustavo",
+     null
+    ],
+    [
+     "2026-09-25",
+     3388,
+     2812,
+     "Ryan cesar",
+     null
+    ],
+    [
+     "2026-09-28",
+     3322,
+     0,
+     "Pedro",
+     null
+    ],
+    [
+     "2026-09-30",
+     3275,
+     6000,
+     "Gustavo",
+     null
+    ],
+    [
+     "2026-10-09",
+     3060,
+     6000,
+     "Gustavo",
+     null
+    ],
+    [
+     "2026-10-21",
+     2782,
+     6000,
+     "Gustavo",
+     null
     ]
    ]
   },
@@ -1498,18 +1582,18 @@
    "serie": "2563050V",
    "tipo": "Regressivo",
    "freq": 6000,
-   "horimetro": 3109,
-   "horimetro_fonte": "coleta",
+   "horimetro": 2820,
+   "horimetro_fonte": "status",
    "horimetro_total": 6000,
-   "restantes": 3109,
-   "pct_consumido": 48.2,
+   "restantes": 2820,
+   "pct_consumido": 53.0,
    "status": "EM_DIA",
-   "dias_24h": 130,
-   "taxa_h_dia": 22.6,
-   "dias_previstos": 138,
-   "previsao": "2027-03-07",
-   "ultima_coleta": "2026-10-09",
-   "dias_sem_coleta": 11,
+   "dias_24h": 118,
+   "taxa_h_dia": 22.8,
+   "dias_previstos": 124,
+   "previsao": "2027-02-22",
+   "ultima_coleta": "2026-10-21",
+   "dias_sem_coleta": 0,
    "coleta_vencida": false,
    "ultima_preventiva": null,
    "obs_recente": null,
@@ -1598,6 +1682,13 @@
      6000,
      "Gustavo",
      null
+    ],
+    [
+     "2026-10-21",
+     2820,
+     6000,
+     "Gustavo",
+     null
     ]
    ]
   },
@@ -1610,18 +1701,18 @@
    "serie": "2563056V",
    "tipo": "Regressivo",
    "freq": 6000,
-   "horimetro": 3145,
-   "horimetro_fonte": "coleta",
+   "horimetro": 2858,
+   "horimetro_fonte": "status",
    "horimetro_total": 6000,
-   "restantes": 3145,
-   "pct_consumido": 47.6,
+   "restantes": 2858,
+   "pct_consumido": 52.4,
    "status": "EM_DIA",
-   "dias_24h": 131,
-   "taxa_h_dia": 21.7,
-   "dias_previstos": 145,
-   "previsao": "2027-03-14",
-   "ultima_coleta": "2026-10-09",
-   "dias_sem_coleta": 11,
+   "dias_24h": 119,
+   "taxa_h_dia": 22.0,
+   "dias_previstos": 130,
+   "previsao": "2027-02-28",
+   "ultima_coleta": "2026-10-21",
+   "dias_sem_coleta": 0,
    "coleta_vencida": false,
    "ultima_preventiva": "2026-10-09",
    "obs_recente": "6000",
@@ -1710,6 +1801,13 @@
      6000,
      "Gustavo",
      null
+    ],
+    [
+     "2026-10-21",
+     2858,
+     6000,
+     "Gustavo",
+     null
     ]
    ]
   },
@@ -1731,9 +1829,9 @@
    "dias_24h": 144,
    "taxa_h_dia": 18.0,
    "dias_previstos": 193,
-   "previsao": "2027-05-01",
+   "previsao": "2027-05-02",
    "ultima_coleta": "2026-10-09",
-   "dias_sem_coleta": 11,
+   "dias_sem_coleta": 12,
    "coleta_vencida": false,
    "ultima_preventiva": "2026-09-09",
    "obs_recente": null,
@@ -1834,18 +1932,18 @@
    "serie": "24003014C65ZH",
    "tipo": "Crescente",
    "freq": 4500,
-   "horimetro": 554,
-   "horimetro_fonte": "coleta",
+   "horimetro": 804,
+   "horimetro_fonte": "status",
    "horimetro_total": 5000,
-   "restantes": 3946,
-   "pct_consumido": 12.3,
+   "restantes": 3696,
+   "pct_consumido": 17.9,
    "status": "EM_DIA",
-   "dias_24h": 164,
-   "taxa_h_dia": 17.3,
-   "dias_previstos": 227,
-   "previsao": "2027-06-04",
-   "ultima_coleta": "2026-10-09",
-   "dias_sem_coleta": 11,
+   "dias_24h": 154,
+   "taxa_h_dia": 17.8,
+   "dias_previstos": 207,
+   "previsao": "2027-05-16",
+   "ultima_coleta": "2026-10-21",
+   "dias_sem_coleta": 0,
    "coleta_vencida": false,
    "ultima_preventiva": "2026-09-02",
    "obs_recente": "Agendar preventiva",
@@ -1934,6 +2032,13 @@
      5000,
      "Gustavo",
      null
+    ],
+    [
+     "2026-10-21",
+     804,
+     5000,
+     "Gustavo",
+     null
     ]
    ]
   },
@@ -1955,9 +2060,9 @@
    "dias_24h": 194,
    "taxa_h_dia": 22.1,
    "dias_previstos": 210,
-   "previsao": "2027-05-18",
+   "previsao": "2027-05-19",
    "ultima_coleta": "2026-08-06",
-   "dias_sem_coleta": 75,
+   "dias_sem_coleta": 76,
    "coleta_vencida": true,
    "ultima_preventiva": null,
    "obs_recente": null,
@@ -2103,6 +2208,28 @@
   }
  ],
  "alertas_dados": [
+  {
+   "tag": "M11",
+   "data": "2026-10-21",
+   "codigo": "RESET_PRECOCE",
+   "gravidade": "alta",
+   "msg": "Contador reiniciou com só 28% do ciclo usado — preventiva antecipada ou leitura na máquina errada?",
+   "valor": 22,
+   "anterior": 550,
+   "data_anterior": "2026-09-09",
+   "inspetor": "Gustavo"
+  },
+  {
+   "tag": "M26",
+   "data": "2026-10-21",
+   "codigo": "SALTO",
+   "gravidade": "alta",
+   "msg": "Andou 914 h em 21 dia(s) — o máximo possível é ~504 h",
+   "valor": 481,
+   "anterior": 1395,
+   "data_anterior": "2026-09-30",
+   "inspetor": "Gustavo"
+  },
   {
    "tag": "M25",
    "data": "2026-10-09",
@@ -2423,6 +2550,13 @@
     "inspetores": [
      "Gustavo"
     ]
+   },
+   {
+    "data": "2026-10-21",
+    "maquinas": 15,
+    "inspetores": [
+     "Gustavo"
+    ]
    }
   ],
   "semanas": [
@@ -2585,33 +2719,18 @@
    {
     "inicio": "2026-10-19",
     "fim": "2026-10-25",
-    "lidas": 0,
+    "lidas": 15,
     "total": 25,
-    "pct": 0,
+    "pct": 60,
     "faltaram": [
      "M01",
      "M02",
-     "M03",
-     "M04",
      "M05",
      "M06",
      "M07",
-     "M09",
-     "M10",
-     "M11",
-     "M14",
      "M15",
-     "M16",
-     "M17",
-     "M18",
      "M19",
      "M20",
-     "M21",
-     "M22",
-     "M23",
-     "M24",
-     "M25",
-     "M26",
      "M27",
      "M28"
     ]
@@ -2620,9 +2739,9 @@
   "inspetores": [
    {
     "nome": "Gustavo",
-    "leituras": 164,
-    "dias_coleta": 10,
-    "ultima": "2026-10-09"
+    "leituras": 179,
+    "dias_coleta": 11,
+    "ultima": "2026-10-21"
    },
    {
     "nome": "Ryan César",
@@ -2657,7 +2776,7 @@
    "M07",
    "M15"
   ],
-  "intervalo_medio_dias": 8.9,
-  "ultima_coleta": "2026-10-09"
+  "intervalo_medio_dias": 9.2,
+  "ultima_coleta": "2026-10-21"
  }
 }
